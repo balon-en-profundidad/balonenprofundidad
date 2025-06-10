@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balón en Profundidad - El Fútbol como antes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'VT323', monospace;
+            background-color: #000033;
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+            color: #FFFFFF;
+            font-size: 20px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background-color: #00004d;
+            border: 4px ridge #C0C0C0;
+            padding: 10px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 4px double #C0C0C0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 36px;
+            color: #FFFF00;
+            text-shadow: 3px 3px #FF0000;
+            display: inline-block;
+        }
+        
+        nav {
+            background-color: #C0C0C0;
+            padding: 5px;
+            text-align: center;
+            border: 2px outset #E0E0E0;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            font-family: 'Press Start 2P', cursive;
+            color: #0000FF;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        nav a:hover, nav a.active {
+            background-color: #FFFF00;
+            color: #FF0000;
+        }
+        
+        h2.section-title {
+            font-family: 'Press Start 2P', cursive;
+            background-color: #C0C0C0;
+            color: #000000;
+            padding: 8px;
+            font-size: 22px;
+            border: 2px outset #E0E0E0;
+            text-align: center;
+        }
+
+        .article-card {
+            background-color: #000066;
+            border: 2px solid #C0C0C0;
+            padding: 15px;
+            margin-bottom: 20px;
+            overflow: hidden; /* Clearfix for floated image */
+        }
+
+        .article-card img {
+            max-width: 150px;
+            height: 150px;
+            object-fit: cover;
+            float: left;
+            margin-right: 15px;
+            border: 2px solid #C0C0C0;
+        }
+        
+        .article-card h3 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 18px;
+            color: #FFFF00;
+            margin-top: 0;
+            text-transform: none; 
+        }
+
+        .article-card p {
+            margin-bottom: 10px;
+        }
+
+        .read-more-btn {
+            font-family: 'VT323', monospace;
+            font-size: 18px;
+            background-color: #C0C0C0;
+            color: #000000;
+            border: 2px outset #E0E0E0;
+            padding: 5px 10px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        
+        .article-viewer {
+            display: none;
+            background-color: #000066;
+            border: 2px solid #C0C0C0;
+            padding: 20px;
+        }
+
+        .article-viewer h2 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 24px;
+            color: #FFFF00;
+            margin-bottom: 20px;
+        }
+        
+        .article-viewer h4 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 18px;
+            color: #FFA500;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .article-viewer img {
+            max-width: 300px;
+            display: block;
+            margin: 0 auto 20px auto;
+            border: 4px solid #C0C0C0;
+        }
+
+        .article-viewer p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .back-btn {
+             font-family: 'Press Start 2P', cursive;
+             font-size: 16px;
+             background-color: #FF0000;
+             color: #FFFFFF;
+             border: 2px outset #FF5555;
+             padding: 10px 15px;
+             cursor: pointer;
+             display: block;
+             width: fit-content;
+             margin: 20px auto 0 auto;
+        }
+
+        .full-article-content {
+            display: none;
+        }
+
+        .legend-card {
+             background-color: #330000;
+             border: 2px solid #FFD700;
+        }
+
+        .legend-card h3 {
+            color: #FFD700;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 4px double #C0C0C0;
+            font-size: 16px;
+        }
+
+        .hit-counter {
+            background-color: #000;
+            color: #00FF00;
+            padding: 5px 10px;
+            border: 1px solid #00FF00;
+            display: inline-block;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3N2MDc2cHBtZWNnaTJ0ZmZmbGk0dHB6MnR2Z3p1cGJ0M2ZqdDZkZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/J6b32gRpT2fC/giphy.gif" alt="Balón de fútbol girando" width="50" style="vertical-align: middle;">
+            <h1>Balón en Profundidad</h1>
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3N2MDc2cHBtZWNnaTJ0ZmZmbGk0dHB6MnR2Z3p1cGJ0M2ZqdDZkZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/J6b32gRpT2fC/giphy.gif" alt="Balón de fútbol girando" width="50" style="vertical-align: middle;">
+        </header>
+        
+        <nav>
+            <a data-filter="todos" class="nav-filter active">Todos</a>
+            <a data-filter="liga" class="nav-filter">La Liga</a>
+            <a data-filter="premier" class="nav-filter">Premier</a>
+            <a data-filter="internacional" class="nav-filter">Internacional</a>
+            <a data-filter="tacticas" class="nav-filter">Tácticas</a>
+            <a data-filter="leyendas" class="nav-filter">Leyendas</a>
+        </nav>
+
+        <div id="article-list">
+            <h2 class="section-title">=== Últimas noticias ===</h2>
+
+            <!-- Article 1 -->
+            <div class="article-card" data-category="liga">
+                <img src="https://placehold.co/150x150/003366/FFFFFF?text=Mbappé" alt="Imagen de Kylian Mbappé">
+                <h3>Mbappé, un pichichi insuficiente</h3>
+                <p>El francés brilla con luz propia en una temporada nefasta para el Real Madrid en lo colectivo, que se salda con la Supercopa de Europa como único y pobre botín. Un sobresaliente individual en medio de un suspenso general.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>El rey goleador de un reino en ruinas</h4>
+                    <p>Kylian Mbappé ha cumplido con su parte del trato. Aterrizó en Madrid con la vitola de ser el mejor jugador del mundo y, en el plano individual, no ha decepcionado. Su adaptación al Real Madrid y a La Liga ha sido fulgurante, finalizando la temporada como el máximo goleador del campeonato para llevarse un incontestable trofeo Pichichi. Su velocidad, desborde y, sobre todo, su definición letal han sido un faro constante en el ataque blanco, un oasis de calidad en medio de un desierto de juego colectivo. Cada galopada suya era una amenaza, cada disparo una promesa de gol. Ha sido, sin duda, el jugador más determinante del campeonato español.</p>
+                    <p>Sin embargo, su espectacular rendimiento individual, que roza la matrícula de honor, no ha sido suficiente para maquillar una temporada decepcionante a nivel de títulos, una campaña que en el argot del club se calificaría como nefasta. El francés ha sido una estrella solitaria brillando en una noche demasiado oscura.</p>
+                    <h4>La Supercopa y dos fracasos rotundos</h4>
+                    <p>El único trofeo que levantará el Real Madrid esta temporada es la Supercopa de Europa, ganada al inicio del curso contra el Atalanta en Glasgow. Un título menor para las aspiraciones y la inversión del club, que sabe a muy poco y que se ha revelado como un espejismo de lo que vendría después. A partir de ahí, el año ha sido un cúmulo de decepciones en los dos torneos que de verdad marcan el éxito o el fracaso de una temporada en Chamartín.</p>
+                    <p>En la Champions League, la competición fetiche del club, el equipo sufrió una dolorosa eliminación en semifinales ante el Bayern de Múnich. Tras un resultado esperanzador en la ida, la vuelta en el Bernabéu fue un ejercicio de impotencia, con un equipo incapaz de superar el entramado defensivo alemán, dejando una herida abierta en la afición. En La Liga, a pesar de los goles de Mbappé, la irregularidad fue la tónica. El equipo se dejó puntos inexplicables contra rivales de la parte baja y mostró una alarmante falta de solidez defensiva y un centro del campo a menudo superado. Esto le impidió luchar por el campeonato hasta el final, viéndose superado por rivales más sólidos y trabajados.</p>
+                    <h4>Un proyecto a medio construir</h4>
+                    <p>La temporada del Real Madrid se puede definir como un fracaso colectivo que deja una conclusión clara: no basta con tener al mejor jugador. El sobresaliente rendimiento de Mbappé confirma que el club ha fichado a un líder sobre el que construir el futuro, pero también expone las carencias de una plantilla que necesita ajustes urgentes para volver a ser competitiva. Su primer año deja un Pichichi y una Supercopa, pero sobre todo, la sensación de que el proyecto está a medio construir y que el francés, ahora mismo, está demasiado solo en la cima. El verano se antoja largo en Valdebebas.</p>
+                </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="article-card" data-category="liga">
+                <img src="https://placehold.co/150x150/004D98/FFFFFF?text=Yamal" alt="Imagen de Lamine Yamal">
+                <h3>Lamine Yamal, el faro del Barça</h3>
+                <p>Con tan solo 17 años, Lamine Yamal se ha consolidado como la estrella absoluta del FC Barcelona en la primera temporada de Hansi Flick. Analizamos su impacto, su evolución y cómo se ha convertido en la mayor esperanza culé.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                     <h4>La consagración de un elegido</h4>
+                     <p>Si la temporada 2023-2024 fue su irrupción, la 2024-2025 ha sido la de su consagración definitiva. Lamine Yamal ha dejado de ser una promesa para convertirse en el jugador franquicia del FC Barcelona. En un año de transición marcado por la llegada del técnico alemán Hansi Flick y por las continuas dificultades económicas del club, el joven extremo ha sido la luz que ha guiado al equipo. Su descaro, su increíble habilidad en el uno contra uno y, sobre todo, su sorprendente madurez en la toma de decisiones, han asombrado a todo el mundo del fútbol.</p>
+                     <p>Ha finalizado la temporada con cifras de superestrella, superando la decena de goles y asistencias, siendo el jugador más determinante del equipo con una diferencia abismal. Se ha cargado al equipo a la espalda en momentos de dificultad y su influencia ha sido clave para que el Barcelona lograra asegurar sus objetivos mínimos, como la clasificación para la próxima Champions League, un pilar fundamental para la viabilidad económica de la entidad.</p>
+                     <h4>La mano de Hansi Flick</h4>
+                     <p>La llegada del técnico alemán ha sido fundamental en la evolución de Yamal. Si bien su talento ofensivo es innato y caótico, Flick ha conseguido pulir aspectos tácticos de su juego sin restarle creatividad. Yamal ha mejorado notablemente en la presión tras pérdida y en su compromiso defensivo, convirtiéndose en un jugador mucho más completo. Flick ha diseñado un sistema para potenciar sus virtudes, buscándolo constantemente en el uno contra uno y dándole libertad para moverse por todo el frente de ataque, pero exigiéndole un rigor táctico que antes no tenía.</p>
+                     <p>El equipo, aunque con altibajos lógicos y sin poder competir de tú a tú por los grandes títulos, ha mostrado una clara mejoría en la presión alta y en la condición física, señas de identidad del nuevo entrenador. Aunque se han evidenciado carencias en ciertas posiciones, la temporada se considera un paso adelante, sentando las bases de un proyecto que, con Lamine Yamal como estandarte y la disciplina de Flick en el banquillo, invita a un optimismo moderado en Can Barça.</p>
+                </div>
+            </div>
+            
+            <!-- Article 3 -->
+            <div class="article-card" data-category="liga">
+                <img src="https://placehold.co/150x150/FFC400/000000?text=Bellingham" alt="Imagen de Jobe Bellingham">
+                <h3>Bellingham 'vuelve' a casa</h3>
+                <p>El Borussia Dortmund lo ha vuelto a hacer. El club alemán ha oficializado el fichaje de Jobe Bellingham, hermano de Jude, continuando una saga familiar que dejó una huella imborrable en el Signal Iduna Park.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>La fórmula del éxito</h4>
+                    <p>El Borussia Dortmund sigue fiel a su filosofía de captar a los mayores talentos jóvenes del planeta, pulirlos y, a menudo, venderlos por una cifra astronómica. El último en llegar es un apellido que resuena con fuerza en la memoria reciente del club: Bellingham. Jobe, el hermano menor de la superestrella del Real Madrid, Jude, ha sido anunciado como nuevo jugador del BVB procedente del Sunderland de la segunda división inglesa. A sus 19 años, Jobe llega a la Bundesliga con la vitola de ser uno de los centrocampistas más prometedores de su generación, y la expectación en la cuenca del Ruhr es máxima.</p>
+                    <h4>La presión del apellido</h4>
+                    <p>El movimiento es una declaración de intenciones del Dortmund. Tras la millonaria venta de su hermano Jude al Real Madrid hace dos temporadas, una de las más exitosas de su historia, el club recupera a un Bellingham en una operación que, aunque de menor coste (rondando los 15 millones de euros), está cargada de simbolismo y, también, de presión para el joven futbolista.</p>
+                    <p>Jobe es un centrocampista de perfil 'box-to-box', con una gran capacidad física, buena llegada al área y una inteligencia táctica notable para su edad. Sin embargo, las comparaciones serán inevitables. La dirección deportiva del Dortmund confía en que el entorno del club, especializado en proteger y potenciar a los diamantes en bruto, sea el ecosistema perfecto para que explote todo su potencial, siguiendo el exitoso camino que ya recorrió su hermano mayor. Los aficionados del Muro Amarillo ya sueñan con verle dominar el centro del campo del Signal Iduna Park y, quién sabe, si repetir la historia.</p>
+                </div>
+            </div>
+
+            <!-- Article 4 -->
+             <div class="article-card" data-category="liga">
+                <img src="https://placehold.co/150x150/8B4513/FFFFFF?text=España+Vaciada" alt="Imagen de un campo de fútbol vacío">
+                <h3>La España Vaciada se queda sin fútbol</h3>
+                <p>El mapa del fútbol profesional español sufre una nueva herida. Tras una temporada agónica, el último representante de la 'España Vaciada' en Segunda ha caído, dejando a 24 provincias sin fútbol en la élite.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>El silencio de la grada</h4>
+                    <p>Es la crónica de un silencio anunciado. El pitido final de la temporada 2024-2025 ha confirmado un hecho dramático para el fútbol español: la 'España Vaciada' se ha quedado sin representación en el fútbol profesional. Por primera vez en décadas, ninguna de las 24 provincias que componen ese vasto territorio demográficamente deprimido tendrá un equipo en LaLiga EA Sports o LaLiga Hypermotion. El último bastión, que aguantó heroicamente hasta las últimas jornadas, no pudo evitar el descenso, certificando un vacío que trasciende lo deportivo para convertirse en un síntoma social.</p>
+                    <p>Provincias con una histórica tradición de fútbol modesto y resistente como Soria (Numancia), Burgos, Teruel, Palencia o Cuenca ven cómo el sueño de competir en la élite se desvanece por completo. El fútbol profesional, ese que viaja en AVE y sale en las noticias, ya no parará en sus estaciones.</p>
+                    <h4>Más que un partido</h4>
+                    <p>La pérdida de un equipo profesional supone un golpe durísimo a nivel económico y social para estas regiones. No se trata solo de fútbol. Se pierden ingresos por derechos de televisión, patrocinios, turismo y hostelería. Se pierde visibilidad mediática. Y, sobre todo, se pierde un elemento de cohesión y orgullo local que el fútbol proporciona como pocos fenómenos. El equipo de la tierra es, para muchos, el único embajador que compite de tú a tú con las grandes capitales.</p>
+                    <p>El fútbol moderno, con su creciente y desigual reparto de ingresos, sus exigencias económicas inasumibles y su concentración de poder en las grandes áreas metropolitanas, está dejando atrás a los modestos. La España Vaciada no solo pierde población, servicios e industria; ahora, también se queda sin sus equipos, sin una de sus últimas ilusiones de fin de semana.</p>
+                </div>
+            </div>
+            
+            <!-- Article 5 -->
+            <div class="article-card" data-category="premier">
+                <img src="https://placehold.co/150x150/D00027/FFFFFF?text=Liverpool" alt="Imagen del Liverpool">
+                <h3>La era Slot empieza con gloria</h3>
+                <p>Contra todo pronóstico, el Liverpool de Arne Slot se ha proclamado campeón de la Premier League 2024-2025, superando al City y Arsenal en una temporada que marca el inicio exitoso de una nueva era en Anfield.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>El relevo imposible</h4>
+                    <p>La marcha de Jürgen Klopp al final de la temporada pasada dejó un vacío gigantesco y un mar de dudas en Anfield. El carismático alemán era más que un entrenador; era el alma del equipo. La llegada del neerlandés Arne Slot, un técnico respetado por su trabajo en el Feyenoord pero sin experiencia en una de las cinco grandes ligas, fue recibida con escepticismo por gran parte de la crítica y la afición. ¿Sería capaz de gestionar la presión y continuar el legado de uno de los entrenadores más queridos de la historia del club? La respuesta, al final de la temporada 2024-2025, es un sí rotundo y resonante. El Liverpool es el nuevo campeón de la Premier League.</p>
+                    <h4>Las claves del campeón</h4>
+                    <p>Slot ha demostrado una inteligencia táctica y una capacidad de gestión de grupo extraordinarias. Lejos de intentar una ruptura total con el pasado, ha construido sobre los sólidos cimientos de Klopp, introduciendo matices de su propio estilo: una presión aún más organizada y zonal, y una mayor fluidez posicional en ataque. El equipo ha respondido con una temporada de una regularidad asombrosa, convirtiendo Anfield en un fortín inexpugnable y mostrando una fortaleza mental admirable en los partidos a domicilio.</p>
+                    <p>Varias han sido las claves de este éxito inesperado. Primero, el liderazgo de los veteranos. Un imperial Virgil van Dijk ha firmado una de sus mejores temporadas, erigiéndose como un muro infranqueable en defensa, mientras que Mohamed Salah, acallando los rumores sobre su futuro, ha vuelto a superar la barrera de los 25 goles. Segundo, la explosión definitiva de Darwin Núñez. El uruguayo, bajo la confianza de Slot, ha pulido su definición y ha sido una pesadilla constante para las defensas rivales. Por último, el centro del campo, con un Alexis Mac Allister excelso como director de orquesta, ha sido el motor del equipo. La conquista de la Premier League por parte del Liverpool es una de las grandes historias del fútbol europeo reciente, un nuevo amanecer 'red' que demuestra, contra todo pronóstico, que hay vida después de Klopp.</p>
+                </div>
+            </div>
+
+            <!-- Article 6 -->
+            <div class="article-card" data-category="premier">
+                <img src="https://placehold.co/150x150/DA291C/FFFFFF?text=Man+Utd" alt="Imagen del Manchester United">
+                <h3>Anatomía de un desastre: Man Utd</h3>
+                <p>La temporada 2024-2025 del Manchester United ha sido un fracaso rotundo. El equipo ha finalizado en novena posición, consumando una de las peores campañas de su historia reciente y quedando fuera de Europa.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>El teatro de las pesadillas</h4>
+                    <p>Old Trafford, el autoproclamado 'Teatro de los Sueños', se ha convertido en el escenario de una pesadilla recurrente y cada vez más profunda. La temporada 2024-2025 del Manchester United ha sido la confirmación de una crisis deportiva y estructural que parece no tener fin. A pesar de la fuerte inversión y de la llegada de la nueva dirección deportiva de INEOS, liderada por Sir Jim Ratcliffe con la promesa de un cambio de rumbo, el equipo ha dado un vergonzoso paso atrás, finalizando en una humillante novena posición en la Premier League. El resultado: fuera de todas las competiciones europeas para la próxima campaña, un golpe deportivo y económico de dimensiones catastróficas.</p>
+                     <h4>Señales de un equipo roto</h4>
+                    <p>La decisión de mantener a Erik ten Hag en el banquillo tras un verano de incertidumbre se ha demostrado como un error fatal. El equipo nunca encontró un patrón de juego reconocible, mostrándose como un conjunto anárquico, extraordinariamente frágil en defensa y desesperadamente previsible en ataque. Las lesiones han sido un factor, sí, pero no pueden servir como única excusa para un rendimiento tan pobre que ha incluido goleadas sonrojantes y una incapacidad manifiesta para competir contra los grandes equipos.</p>
+                    <p>El fracaso ha sido colectivo, pero varios nombres quedan señalados. Marcus Rashford ha completado su temporada más decepcionante, con cifras goleadoras ínfimas y una actitud apática que ha sido duramente cuestionada. Casemiro ha mostrado un declive físico alarmante, viéndose superado constantemente. Fichajes millonarios como Antony siguen sin justificar una fracción de su coste, y la irregularidad ha sido la norma en casi toda la plantilla. El Manchester United se enfrenta a un verano crucial. La temporada ha sido un fracaso sin paliativos que obliga a tomar decisiones drásticas y dolorosas para intentar acabar con una era de mediocridad que se ha alargado demasiado.</p>
+                </div>
+            </div>
+
+            <!-- Article 7 -->
+             <div class="article-card" data-category="internacional">
+                <img src="https://placehold.co/150x150/002868/FFFFFF?text=USA" alt="Imagen de Pulisic y Donovan">
+                <h3>Adiós al 'Capitán América': guerra Pulisic-Donovan</h3>
+                <p>La selección de Estados Unidos vive una crisis interna sin precedentes. La relación entre Christian Pulisic y la leyenda Landon Donovan está completamente rota, con acusaciones de "falta de respeto" que amenazan el proyecto del USMNT.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>Una fractura expuesta</h4>
+                    <p>El vestuario de la selección masculina de fútbol de Estados Unidos es un polvorín. Lo que era un secreto a voces ha estallado públicamente, dejando al descubierto una fractura profunda entre dos generaciones. La relación entre la actual estrella y capitán, Christian Pulisic, y el mejor jugador de la historia del país, Landon Donovan, es inexistente. En una entrevista reciente para un podcast, Donovan, actual analista de televisión, ha sido demoledor: "Hay una falta de respeto por parte de Christian. No solo hacia mí, sino hacia muchos exjugadores que hemos construido lo que él disfruta ahora. No ha mostrado ningún interés en conocer nuestra historia, en saber de dónde viene todo esto".</p>
+                    <h4>El choque de dos mundos</h4>
+                    <p>Estas duras palabras confirman un choque cultural que viene de lejos. Fuentes cercanas al equipo hablan de un Pulisic distante, con un carácter forjado en Europa (Dortmund, Chelsea, Milan) que choca con la cultura más gregaria y de equipo del fútbol estadounidense. El jugador del AC Milan se siente el líder indiscutible y no acepta de buen grado las críticas de las viejas glorias, a quienes considera parte de un pasado ya superado. Donovan, por su parte, representa a una generación que luchó por poner al 'soccer' en el mapa y que reclama un mínimo de reconocimiento y humildad.</p>
+                    <p>Esta guerra abierta entre el pasado y el presente del 'soccer' llega en el peor momento posible, a las puertas de una Copa América donde Estados Unidos es anfitrión y a solo un año del Mundial de 2026, el mayor evento futbolístico de su historia. La federación tiene un problema mayúsculo entre manos: mediar para reconducir la situación o arriesgarse a que el choque de egos devore un proyecto que parecía destinado al éxito.</p>
+                </div>
+            </div>
+
+            <!-- Article 8 -->
+             <div class="article-card" data-category="internacional">
+                <img src="https://placehold.co/150x150/FFFFFF/000000?text=Groenlandia" alt="Imagen de la bandera de Groenlandia">
+                <h3>La CONCACAF le dice 'no' a Groenlandia</h3>
+                <p>El sueño de Groenlandia de unirse a la familia del fútbol se ha topado con un muro. La CONCACAF ha rechazado su solicitud de afiliación, dejando a la isla helada en un limbo deportivo y avivando el debate sobre su futuro.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>Un sueño congelado</h4>
+                    <p>La Federación de Fútbol de Groenlandia ha recibido un duro revés a sus aspiraciones de competir a nivel internacional. La CONCACAF, la confederación de Norteamérica, Centroamérica y el Caribe a la que aspiraban a unirse por proximidad geográfica, ha denegado formalmente su petición para convertirse en miembro de pleno derecho. La decisión, basada en "criterios estatutarios no cumplidos", deja a la selección groenlandesa fuera de la posibilidad de competir en torneos oficiales como la Copa Oro o la clasificación para el Mundial, un golpe para un país que ha invertido mucho en desarrollar su fútbol.</p>
+                    <h4>El laberinto político y la vía europea</h4>
+                    <p>El principal escollo parece ser el estatus político de Groenlandia. Aunque geográficamente americana, es un territorio autónomo perteneciente al Reino de Dinamarca. A diferencia de las Islas Feroe, otro territorio danés que sí es miembro de pleno derecho de la UEFA, CONCACAF ha adoptado una postura más estricta con respecto a la soberanía nacional de sus miembros.</p>
+                     <p>La federación groenlandesa, que ya está construyendo estadios con césped artificial capaces de resistir el clima extremo y que ha puesto en marcha una liga local cada vez más competitiva, se siente decepcionada y ahora estudia sus opciones. La posibilidad de intentar unirse a la UEFA, siguiendo el precedente de las Feroe o Gibraltar, está sobre la mesa, aunque logísticamente sería un desafío mucho mayor. El 'no' de la CONCACAF no es el final del camino, pero sí un obstáculo inesperado para un país que solo quiere el derecho a jugar al fútbol.</p>
+                </div>
+            </div>
+
+            <!-- Article 9 -->
+             <div class="article-card" data-category="internacional">
+                <img src="https://placehold.co/150x150/1E90FF/FFFFFF?text=Superordenador" alt="Imagen de un chip de ordenador">
+                <h3>El 'Superordenador' gafe y el Mundial de Clubes</h3>
+                <p>Un famoso superordenador ha dictado sentencia: el Manchester City es el gran favorito para ganar el nuevo Mundial de Clubes de 2025. Una predicción que, por su historial de errores, ha provocado más burlas que confianza.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>La dictadura del algoritmo</h4>
+                    <p>En la era del Big Data y la inteligencia artificial, las predicciones basadas en complejos algoritmos se han convertido en un clásico antes de cada gran torneo. Y el nuevo y expandido Mundial de Clubes de 2025, con su formato de 32 equipos, no es una excepción. Un conocido 'superordenador' de una empresa de análisis de datos ha publicado su pronóstico tras procesar millones de variables, y el resultado es claro: el Manchester City de Pep Guardiola es el máximo favorito para alzarse con el título, otorgándole un 28.3% de probabilidades. Le siguen, a una distancia considerable, el Real Madrid (15.4%) y el Bayern de Múnich (11.2%).</p>
+                    <h4>La maldición del favorito</h4>
+                    <p>Sin embargo, la noticia ha sido recibida con una oleada de escepticismo y humor en las redes sociales. ¿El motivo? La merecida reputación 'gafe' de este superordenador, que acumula un historial de errores notables en sus predicciones de grandes eventos. Falló estrepitosamente en el último Mundial de selecciones, en varias finales de Champions League y en campeonatos de liga, a menudo señalando como campeón a un equipo que acababa sufriendo una eliminación inesperada.</p>
+                    <p>Por ello, los aficionados de los equipos rivales han acogido la noticia como la mejor de las suertes, bromeando con que el favoritismo del City es ahora su mayor maldición y una garantía de que no ganarán el torneo. Mientras la ciencia de datos intenta abrirse paso en el deporte, el componente impredecible, pasional y mágico del fútbol parece, de momento, resistirse a ser encerrado en un frío y, a menudo, equivocado algoritmo.</p>
+                </div>
+            </div>
+
+            <!-- TACTICS -->
+            <div data-category="tacticas">
+                <h2 class="section-title">*** El rincón del táctico ***</h2>
+                <div class="article-card">
+                     <h3>El 'Gegenpressing' 2.0 de Slot</h3>
+                     <p>Arne Slot no ha desechado el 'Gegenpressing' de Klopp, lo ha evolucionado. La clave: una presión aún más zonal y activada por 'triggers' (desencadenantes) específicos. La formación base es un 4-3-3 que se convierte en un agresivo 4-1-5 en fase de presión alta...</p>
+                     <button class="read-more-btn">LEER MÁS >>></button>
+                     <div class="full-article-content">
+                        <div class="tactics-board">
+Liverpool presionando (4-1-5)
+
+    (Salah) ---- (Nunez) ---- (Diaz)
+      (Szoboszlai) --- (Jones)
+
+            (Mac Allister)
+
+(Trent) -- (VVD) -- (Konate) -- (Robertson)
+
+                   (Alisson)
+                        </div>
+                        <p>El 'Gegenpressing' que llevó al Liverpool de Jürgen Klopp a la gloria se basaba en una ferocidad casi caótica, un 'heavy metal' futbolístico para recuperar el balón inmediatamente tras la pérdida. Arne Slot, su sucesor, ha mantenido la esencia de la presión alta pero ha añadido capas de sofisticación táctica. Su 'Gegenpressing 2.0' es más inteligente, más zonal y menos dependiente de la heroicidad individual, lo que ha resultado en un equipo igual de intenso pero más sostenible en el tiempo.</p>
+                        <p>La clave del sistema de Slot reside en los 'triggers' o desencadenantes. El equipo no salta a presionar a lo loco. Lo hace de forma coordinada y automática cuando se produce una situación concreta que el equipo ha entrenado: un pase atrás del rival, un control deficiente de un contrario o un pase a la banda que limita el espacio del receptor. En ese instante, el equipo se transforma de un 4-3-3 a un 4-1-5, con los dos interiores (Szoboszlai y Jones han sido claves) saltando a la altura de los delanteros para crear una superioridad numérica asfixiante cerca del área rival.</p>
+                        <p>En este esquema, el rol de Alexis Mac Allister como único pivote es vital. El argentino debe leer el juego a la perfección, cubriendo un campo inmenso con una inteligencia posicional sublime para interceptar las segundas jugadas. Esta presión selectiva pero letal ha permitido al Liverpool ahogar a sus rivales en la salida de balón y mantener un ritmo de juego altísimo sin sufrir el desgaste físico que a veces lastraba al equipo en la era anterior, siendo una de las claves maestras de su inesperado título de liga.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- LEGENDS -->
+            <div data-category="leyendas">
+                <h2 class="section-title">+++ Leyendas de los 90 +++</h2>
+                <div class="article-card legend-card">
+                    <img src="https://placehold.co/150x150/0000FF/FFFFFF?text=Ronaldo+R9" alt="Imagen de Ronaldo Nazario">
+                    <h3>Ronaldo: el cometa de un solo año</h3>
+                    <p>Hubo un tiempo, un único año suspendido en la memoria, en que un dios brasileño descendió en Barcelona para mostrarnos el futuro. No jugaba al fútbol; era una fuerza de la naturaleza con botas...</p>
+                    <button class="read-more-btn">LEER MÁS >>></button>
+                    <div class="full-article-content">
+                        <h4>El año que vivimos peligrosamente</h4>
+                        <p>Hay futbolistas que marcan una época. Y luego está Ronaldo Nazário. Lo suyo no fue una época; fue un destello, un cometa que atravesó el firmamento del Camp Nou en la temporada 1996-97 y lo cambió todo para siempre. Llegó siendo un niño prodigio del PSV, con una sonrisa pícara y unas rodillas que aún no conocían el tormento. Y se marchó un año después, rumbo a Milán, convertido en una fuerza incontenible, un susurro de lo que los dioses del fútbol eran capaces de imaginar.</p>
+                        <p>Recordar a ese Ronaldo es recordar la potencia en su estado más puro, la velocidad que no era humana, sino animal. Era una estampida de un solo hombre, un búfalo con la técnica de un bailarín de ballet. Cuando arrancaba con el balón cosido al pie, el césped parecía encogerse bajo sus botas, los defensas se convertían en estatuas de sal y el tiempo se detenía, expectante, sabiendo que algo memorable estaba a punto de ocurrir. El público del Camp Nou aprendió a contener la respiración cuando el '9' recibía el balón.</p>
+                        <h4>El manifiesto de Compostela</h4>
+                        <p>Su gol en Compostela no es un gol; es un manifiesto. Es la tesis doctoral sobre cómo un solo individuo puede desafiar la lógica, la física y la voluntad de once rivales. Aquella carrera desde su propio campo, zafándose de agarrones, de patadas, de empujones, sin perder la compostura ni el equilibrio, para acabar definiendo con una frialdad insultante, es la Capilla Sixtina del fútbol de los 90. Es una obra de arte que aún hoy se estudia, un momento que define no a un jugador, sino a una era. Bobby Robson, su entrenador, se llevaba las manos a la cabeza. No era para menos. No había explicación lógica para lo que acababa de ver.</p>
+                        <p>Se fue pronto, sí. Se fue dejando el amargo sabor de lo que pudo ser y no fue, una historia de amor demasiado corta. Pero su herencia en Barcelona no son los títulos que no ganó de blaugrana, que también los ganó (Copa, Recopa, Supercopa), sino el recuerdo imborrable de haber visto, aunque solo fuera por un instante, la perfección hecha futbolista.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="article-viewer"></div>
+
+        <footer>
+            <p>(c) 1998-2025 Balón en Profundidad Web</p>
+            <p>Numero de visitas:</p>
+            <div class="hit-counter" id="hit-counter">0001337</div>
+        </footer>
+    </div>
+
+    <script>
+        const articleList = document.getElementById('article-list');
+        const articleViewer = document.getElementById('article-viewer');
+        const filters = document.querySelectorAll('.nav-filter');
+        const mainTitle = document.querySelector('h2.section-title');
+        
+        const contentSections = {
+            main: document.getElementById('article-list'),
+            viewer: document.getElementById('article-viewer')
+        };
+        
+        function showSection(sectionName) {
+            contentSections.main.style.display = (sectionName === 'main') ? 'block' : 'none';
+            contentSections.viewer.style.display = (sectionName === 'viewer') ? 'block' : 'none';
+        }
+
+        // Article Filtering Logic
+        filters.forEach(filter => {
+            filter.addEventListener('click', function() {
+                filters.forEach(f => f.classList.remove('active'));
+                this.classList.add('active');
+                const selectedFilter = this.getAttribute('data-filter');
+
+                document.querySelectorAll('#article-list > [data-category], [data-category] > .article-card').forEach(item => {
+                    let category = item.getAttribute('data-category');
+                    let parent = item.parentElement;
+                    let parentCategory = parent ? parent.getAttribute('data-category') : null;
+
+                    const itemIsSectionTitle = item.tagName === 'DIV' && item.querySelector('h2.section-title');
+                    
+                    if (selectedFilter === 'todos' || category === selectedFilter || parentCategory === selectedFilter) {
+                         item.style.display = 'block';
+                         if(itemIsSectionTitle) item.querySelector('h2.section-title').style.display = 'block';
+
+                    } else {
+                        item.style.display = 'none';
+                        if(itemIsSectionTitle) item.querySelector('h2.section-title').style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // "Read More" functionality
+        document.querySelectorAll('.read-more-btn').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const card = event.target.closest('.article-card');
+                const title = card.querySelector('h3').innerText;
+                const imageSrc = card.querySelector('img').src;
+                const fullContent = card.querySelector('.full-article-content').innerHTML;
+
+                articleViewer.innerHTML = `
+                    <h2>${title}</h2>
+                    <img src="${imageSrc}" alt="${title}">
+                    ${fullContent}
+                    <button class="back-btn"><<< VOLVER</button>
+                `;
+                
+                showSection('viewer');
+
+                articleViewer.querySelector('.back-btn').addEventListener('click', () => {
+                    showSection('main');
+                    // re-apply filter to show correct articles
+                    document.querySelector('.nav-filter.active').click();
+                });
+            });
+        });
+
+        // Fake Hit Counter
+        const hitCounter = document.getElementById('hit-counter');
+        let currentHits = 1337;
+        setInterval(() => {
+            currentHits += Math.floor(Math.random() * 3) + 1;
+            hitCounter.textContent = String(currentHits).padStart(7, '0');
+        }, 2500);
+
+    </script>
+
+</body>
+</html>
