@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tu portal de noticias e historias sobre fútbol. Análisis, leyendas y nostalgia del deporte rey.">
+    <meta name="keywords" content="futbol, noticias, leyendas, años 90, retro, Zidane, Ronaldo, Mbappé, La Liga, Premier League, táctica, historia del futbol, Predator, Etrusco, Serie A">
     <title>Balón en Profundidad - El Fútbol como antes</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚽</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -168,13 +170,19 @@
         .full-article-content {
             display: none;
         }
+        
+        #disqus_thread {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 4px double #C0C0C0;
+        }
 
-        .legend-card {
+        .legend-card, .memories-card {
              background-color: #330000;
              border: 2px solid #FFD700;
         }
 
-        .legend-card h3 {
+        .legend-card h3, .memories-card h3 {
             color: #FFD700;
         }
 
@@ -191,9 +199,7 @@
 
     <div class="container">
         <header>
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3N2MDc2cHBtZWNnaTJ0ZmZmbGk0dHB6MnR2Z3p1cGJ0M2ZqdDZkZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/J6b32gRpT2fC/giphy.gif" alt="Balón de fútbol girando" width="50" style="vertical-align: middle;">
             <h1>Balón en Profundidad</h1>
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3N2MDc2cHBtZWNnaTJ0ZmZmbGk0dHB6MnR2Z3p1cGJ0M2ZqdDZkZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/J6b32gRpT2fC/giphy.gif" alt="Balón de fútbol girando" width="50" style="vertical-align: middle;">
         </header>
         
         <nav>
@@ -203,6 +209,7 @@
             <a data-filter="internacional" class="nav-filter">Internacional</a>
             <a data-filter="tacticas" class="nav-filter">Tácticas</a>
             <a data-filter="leyendas" class="nav-filter">Leyendas</a>
+            <a data-filter="recuerdos" class="nav-filter">Recuerdos</a>
         </nav>
 
         <div id="article-list">
@@ -397,22 +404,6 @@ Liverpool presionando (4-1-5)
             <div data-category="leyendas">
                 <h2 class="section-title">+++ Leyendas de los 90 +++</h2>
                 <div class="article-card legend-card">
-                    <img src="https://i.imgur.com/dpqMfHa.png" alt="Imagen de Ronaldo Nazario">
-                    <h3>Ronaldo: el cometa de un solo año</h3>
-                    <p>Hubo un tiempo, un único año suspendido en la memoria, en que un dios brasileño descendió en Barcelona para mostrarnos el futuro. No jugaba al fútbol; era una fuerza de la naturaleza con botas...</p>
-                    <button class="read-more-btn">LEER MÁS >>></button>
-                    <div class="full-article-content">
-                        <h4>El año que vivimos peligrosamente</h4>
-                        <p>Hay futbolistas que marcan una época. Y luego está Ronaldo Nazário. Lo suyo no fue una época; fue un destello, un cometa que atravesó el firmamento del Camp Nou en la temporada 1996-97 y lo cambió todo para siempre. Llegó siendo un niño prodigio del PSV, con una sonrisa pícara y unas rodillas que aún no conocían el tormento. Llegó con la vitola de futuro Balón de Oro, pero nadie podía prever la magnitud de su impacto. En un fútbol, el de los 90, que aún se debatía entre el líbero y el rigor táctico italiano, la aparición de Ronaldo fue una anomalía, un cortocircuito en el sistema.</p>
-                        <p>Recordar a ese Ronaldo es recordar la potencia en su estado más puro, la velocidad que no era humana, sino animal. Era una estampida de un solo hombre, un búfalo con la técnica de un bailarín de ballet. Su arrancada era un trueno. Cuando recibía el balón y se giraba, el estadio entero contenía la respiración. No era una cuestión de si se iría del defensor, sino de cuántos se llevaría por delante. Los rivales no le entraban, rebotaban. El césped parecía encogerse bajo sus botas, los defensas se convertían en estatuas de sal y el tiempo se detenía, expectante, sabiendo que algo memorable estaba a punto de ocurrir.</p>
-                        <h4>El manifiesto de Compostela y una temporada irreal</h4>
-                        <p>Su gol en Compostela no es un gol; es un manifiesto. Es la tesis doctoral sobre cómo un solo individuo puede desafiar la lógica, la física y la voluntad de once rivales. Aquella carrera desde su propio campo, zafándose de agarrones, de patadas, de empujones, sin perder la compostura ni el equilibrio, para acabar definiendo con una frialdad insultante, es la Capilla Sixtina del fútbol de los 90. Es una obra de arte que aún hoy se estudia, un momento que define no a un jugador, sino a una era. Bobby Robson, su entrenador, se llevaba las manos a la cabeza, incrédulo, como un niño que acaba de ver magia por primera vez. No era para menos. No había explicación lógica para lo que acababa de ver.</p>
-                        <p>Pero reducir su temporada a ese gol sería injusto. Fue un año de exhibición constante. Sus 47 goles en 49 partidos son una estadística que hoy, en la era de los récords estratosféricos, sigue pareciendo irreal. Marcó goles de todas las facturas: de potencia, de vaselina, de regate puro, de remate implacable. Su hat-trick al Valencia, con aquel tercer gol en el que parece patinar sobre el césped, es otro ejemplo de su dominio absoluto. Llevó al Barça a ganar la Copa del Rey, la Recopa de Europa y la Supercopa de España, casi todo lo que se podía ganar.</p>
-                        <h4>El adiós que rompió un sueño</h4>
-                        <p>Se fue pronto, sí. Demasiado pronto. Se fue dejando el amargo sabor de lo que pudo ser y no fue, una historia de amor demasiado corta, truncada por despachos y contratos. La herida de su marcha al Inter de Milán, siendo el jugador más querido y dominante del planeta, aún escuece en la memoria culé. Aquella temporada perfecta, sin lesiones, pletórico de fuerza, fue el pico más alto de un jugador que, aunque después ganó Mundiales y Balones de Oro, nunca volvió a transmitir esa sensación de poderío sobrenatural y salvaje. Sus rodillas, más tarde, le recordarían que era humano. Pero durante un año, solo uno, nos hizo creer que no lo era. Su herencia en Barcelona no son solo los títulos; es el recuerdo imborrable de haber visto, aunque solo fuera por un instante, la perfección hecha futbolista.</p>
-                    </div>
-                </div>
-                 <div class="article-card legend-card">
                     <img src="https://i.imgur.com/b8Zsurp.png" alt="Imagen de Zinedine Zidane">
                     <h3>Zidane: la pausa que detenía el tiempo</h3>
                     <p>En un fútbol que empezaba a obsesionarse con la velocidad, apareció un hombre que hizo de la pausa un arte. Zidane no corría; flotaba. No golpeaba el balón; lo acariciaba. Su juego era un ballet en medio del caos...</p>
@@ -427,6 +418,68 @@ Liverpool presionando (4-1-5)
                         <h4>La 'roulette' como filosofía de vida</h4>
                         <p>Si hay un movimiento que define a Zidane, es la 'roulette', ese giro sobre sí mismo con el balón pegado al pie que era a la vez un regate y una declaración de principios. No era un adorno; era la solución más elegante y eficaz a un problema. Era su forma de decir que, ante la presión y el acoso, la mejor salida es la calma, la inteligencia y la técnica. La 'roulette' era la metáfora de su fútbol: una pausa, un giro y, de repente, un mundo de posibilidades se abría ante él. </p>
                         <p>Zidane fue el faro de una generación. En una década de ruido y furia, él fue la melodía clásica, el recordatorio de que el fútbol, en su esencia más pura, es un arte. Su legado en los 90 no se mide solo en títulos, sino en la belleza que aportó al juego. Fue el poeta silencioso que, con un simple control, era capaz de escribir el verso más hermoso.</p>
+                    </div>
+                </div>
+                <div class="article-card legend-card">
+                    <img src="https://i.imgur.com/dpqMfHa.png" alt="Imagen de Ronaldo Nazario">
+                    <h3>Ronaldo: el cometa de un solo año</h3>
+                    <p>Hubo un tiempo, un único año suspendido en la memoria, en que un dios brasileño descendió en Barcelona para mostrarnos el futuro. No jugaba al fútbol; era una fuerza de la naturaleza con botas...</p>
+                    <button class="read-more-btn">LEER MÁS >>></button>
+                    <div class="full-article-content">
+                        <h4>El año que vivimos peligrosamente</h4>
+                        <p>Hay futbolistas que marcan una época. Y luego está Ronaldo Nazário. Lo suyo no fue una época; fue un destello, un cometa que atravesó el firmamento del Camp Nou en la temporada 1996-97 y lo cambió todo para siempre. Llegó siendo un niño prodigio del PSV, con una sonrisa pícara y unas rodillas que aún no conocían el tormento. Llegó con la vitola de futuro Balón de Oro, pero nadie podía prever la magnitud de su impacto. En un fútbol, el de los 90, que aún se debatía entre el líbero y el rigor táctico italiano, la aparición de Ronaldo fue una anomalía, un cortocircuito en el sistema.</p>
+                        <p>Recordar a ese Ronaldo es recordar la potencia en su estado más puro, la velocidad que no era humana, sino animal. Era una estampida de un solo hombre, un búfalo con la técnica de un bailarín de ballet. Cuando arrancaba con el balón cosido al pie, el césped parecía encogerse bajo sus botas, los defensas se convertían en estatuas de sal y el tiempo se detenía, expectante, sabiendo que algo memorable estaba a punto de ocurrir. El público del Camp Nou aprendió a contener la respiración cuando el '9' recibía el balón.</p>
+                        <h4>El manifiesto de Compostela y una temporada irreal</h4>
+                        <p>Su gol en Compostela no es un gol; es un manifiesto. Es la tesis doctoral sobre cómo un solo individuo puede desafiar la lógica, la física y la voluntad de once rivales. Aquella carrera desde su propio campo, zafándose de agarrones, de patadas, de empujones, sin perder la compostura ni el equilibrio, para acabar definiendo con una frialdad insultante, es la Capilla Sixtina del fútbol de los 90. Es una obra de arte que aún hoy se estudia, un momento que define no a un jugador, sino a una era. Bobby Robson, su entrenador, se llevaba las manos a la cabeza, incrédulo, como un niño que acaba de ver magia por primera vez. No era para menos. No había explicación lógica para lo que acababa de ver.</p>
+                        <p>Pero reducir su temporada a ese gol sería injusto. Fue un año de exhibición constante. Sus 47 goles en 49 partidos son una estadística que hoy, en la era de los récords estratosféricos, sigue pareciendo irreal. Marcó goles de todas las facturas: de potencia, de vaselina, de regate puro, de remate implacable. Su hat-trick al Valencia, con aquel tercer gol en el que parece patinar sobre el césped, es otro ejemplo de su dominio absoluto. Llevó al Barça a ganar la Copa del Rey, la Recopa de Europa y la Supercopa de España, casi todo lo que se podía ganar.</p>
+                        <h4>El adiós que rompió un sueño</h4>
+                        <p>Se fue pronto, sí. Demasiado pronto. Se fue dejando el amargo sabor de lo que pudo ser y no fue, una historia de amor demasiado corta, truncada por despachos y contratos. La herida de su marcha al Inter de Milán, siendo el jugador más querido y dominante del planeta, aún escuece en la memoria culé. Aquella temporada perfecta, sin lesiones, pletórico de fuerza, fue el pico más alto de un jugador que, aunque después ganó Mundiales y Balones de Oro, nunca volvió a transmitir esa sensación de poderío sobrenatural y salvaje. Sus rodillas, más tarde, le recordarían que era humano. Pero durante un año, solo uno, nos hizo creer que no lo era. Su herencia en Barcelona no son solo los títulos; es el recuerdo imborrable de haber visto, aunque solo fuera por un instante, la perfección hecha futbolista.</p>
+                    </div>
+                </div>
+            </div>
+
+             <div data-category="recuerdos">
+                <h2 class="section-title">*** El Baúl de los Recuerdos ***</h2>
+                <div class="article-card memories-card">
+                     <img src="https://i.imgur.com/RQCBF62.png" alt="Botas Adidas Predator">
+                     <h3>El arma del diablo: la leyenda de las Adidas Predator</h3>
+                     <p>Antes de 1994, una bota de fútbol era una simple herramienta. Después, fue un arma. Adidas desató una revolución con sus Predator, un calzado que parecía forjado en las entrañas de un volcán...</p>
+                     <button class="read-more-btn">LEER MÁS >>></button>
+                     <div class="full-article-content">
+                        <h4>La revolución de goma</h4>
+                        <p>Hubo un tiempo en que las botas de fútbol eran sencillas, funcionales, casi siempre negras. Eran herramientas de cuero, no declaraciones de intenciones. Y entonces, en 1994, en la antesala del Mundial de Estados Unidos, Adidas lo cambió todo. Desató una bestia en el campo: la Predator. No era solo una bota; era un concepto, una promesa de poder, un pacto con la física. La idea, nacida de la mente del exfutbolista australiano Craig Johnston, era tan simple como genial: añadir inserciones de goma en la zona de golpeo para generar más efecto, más potencia, más control. Un truco "ilegal", como él mismo lo definió, para domar al balón.</p>
+                        <p>El diseño era una agresión visual. El negro clásico se mantenía, pero era desgarrado por el rojo y el blanco, como las fauces de un depredador. Las escamas de goma parecían dientes, y la lengüeta, icónica y reversible, se convirtió en un símbolo de estatus. Calzarse unas Predator era como equiparse para la batalla. No eras un jugador más; eras un especialista, un francotirador, un artista del golpeo.</p>
+                        <h4>Los apóstoles del efecto</h4>
+                        <p>Una bota, por muy revolucionaria que sea, necesita profetas que prediquen su evangelio. Y las Predator encontraron a los mejores. En Inglaterra, un joven David Beckham comenzó a dibujar parábolas imposibles con su pie derecho. Sus tiros libres no eran simples disparos; eran sentencias de gol, trayectorias combadas que desafiaban la gravedad y que debían gran parte de su magia a esa fricción extra que proporcionaba la goma. Cada celebración suya, con la lengüeta roja por fuera, era un anuncio impagable para Adidas.</p>
+                        <p>En Italia, Alessandro Del Piero, 'Pinturicchio', hacía arte con ellas. Sus famosos goles "alla Del Piero", buscando la escuadra lejana desde el vértice del área, se convirtieron en su marca registrada, y las Predator eran el pincel con el que pintaba sus obras maestras. Y luego estaba Zidane. Si Beckham era la potencia y Del Piero la precisión, 'Zizou' era el control sublime. El balón se adhería a sus Predator como si fuera un imán, permitiéndole ejecutar sus ruletas y sus controles orientados con una suavidad insultante. Juntos, ellos y muchos otros, convirtieron una bota en un icono cultural, en un objeto de deseo para millones de niños que soñaban con golpear el balón como sus ídolos.</p>
+                    </div>
+                </div>
+                <div class="article-card memories-card">
+                     <img src="https://i.imgur.com/3rsjhtn.png" alt="Camisetas de la Serie A">
+                     <h3>Cuando el Calcio vestía de gala: las camisetas de la Serie A</h3>
+                     <p>Hubo una era en que la Serie A no solo era la mejor liga del mundo, sino también la más elegante. Sus camisetas, holgadas y vibrantes, eran lienzos donde se mezclaba el arte, el orgullo y patrocinadores legendarios...</p>
+                     <button class="read-more-btn">LEER MÁS >>></button>
+                     <div class="full-article-content">
+                        <h4>El desfile de los domingos</h4>
+                        <p>Para quienes crecimos en los 90, los domingos por la tarde tenían una liturgia. Era la hora del fútbol italiano, la hora de encender la televisión y sumergirse en la que, sin discusión, era la mejor liga del mundo. El Calcio era un universo de estrellas: Maradona en su ocaso napolitano, los holandeses del Milan, los alemanes del Inter, Baggio, Batistuta, Signori... Pero el espectáculo no estaba solo en el césped; estaba también en la tela. Las camisetas de la Serie A de los 90 eran una pasarela de estilo, un festival de diseño que ha dejado una huella imborrable en la memoria colectiva.</p>
+                        <p>Se abandonó el ajuste ceñido de décadas pasadas para abrazar una holgura casi desafiante. El poliéster brillante era el tejido rey, y los cuellos de polo, a menudo con botones y patrones geométricos, eran la norma. Eran camisetas que respiraban fútbol y moda a partes iguales, un reflejo de un país que entiende la estética como una forma de vida. Y en el centro de todo, los patrocinadores. Nombres como Pirelli, Parmalat, Cirio o Nintendo no eran simples logos; eran emblemas que se fusionaban con los colores del club hasta convertirse en parte de su identidad.</p>
+                        <h4>Un museo de tela y nostalgia</h4>
+                        <p>Hacer un repaso por aquellas camisetas es abrir un álbum de cromos sagrado. ¿Quién no recuerda la Fiorentina de Batistuta con ese morado intenso y el logo de Nintendo en el pecho? Era la camiseta de los videojuegos, la de los goles imposibles. O la del Parma de los 90, con sus rayas horizontales azul y amarillo y el logo de Parmalat, una equipación que olía a éxito, a la Copa de la UEFA, a Asprilla y a Zola. </p>
+                        <p>La Sampdoria, con su diseño "blucerchiato" –una franja horizontal blanca, roja y negra sobre fondo azul–, es considerada por muchos la camiseta más bonita de la historia, una obra de arte atemporal. El Inter de Milán, con las rayas verticales nerazzurre y el patrocinio de Pirelli, evocaba la velocidad y la potencia de Ronaldo. La Lazio, con el águila estilizada y el celeste cielo, era pura elegancia romana. Y, por supuesto, el AC Milan de los Invencibles, con sus rayas rossonere y el logo de Opel, una camiseta que era sinónimo de dominio y gloria europea. No eran simples prendas deportivas; eran armaduras, lienzos de historia, cápsulas del tiempo que nos transportan a una época en la que el fútbol italiano, y sus camisetas, reinaban en el mundo.</p>
+                    </div>
+                </div>
+                <div class="article-card memories-card">
+                     <img src="https://i.imgur.com/ZkSC4lp.png" alt="Balón Etrusco del Mundial '90">
+                     <h3>Etrusco Unico: el balón que nos hizo soñar en Italia '90</h3>
+                     <p>Hay balones que son más que un objeto. Son el alma de un torneo, el testigo mudo de la gloria y el drama. El Etrusco Unico no fue solo el balón de Italia '90; fue el corazón de un verano inolvidable...</p>
+                     <button class="read-more-btn">LEER MÁS >>></button>
+                     <div class="full-article-content">
+                        <h4>Un tributo a la historia</h4>
+                        <p>El Mundial de 1990 en Italia fue un torneo de contrastes. Defensivo y a menudo rácano en goles, pero cargado de una atmósfera única, de estadios imponentes y de historias inolvidables. Y en el centro de todo, rodaba una obra de arte: el Adidas Etrusco Unico. Su nombre no era una casualidad. En un país que respira historia, Adidas decidió rendir homenaje a los etruscos, la misteriosa civilización que habitó la península itálica antes que los romanos. Cada uno de los 20 triángulos que formaban el balón estaba adornado con tres cabezas de león etruscas, un detalle sutil pero cargado de simbolismo, uniendo el fútbol moderno con el arte antiguo.</p>
+                        <p>Pero el Etrusco no era solo diseño. Fue una pequeña revolución tecnológica. Fue el primer balón de la historia en tener una capa interna de espuma de poliuretano negra, lo que lo hacía completamente impermeable y mucho más rápido y predecible en su trayectoria que sus predecesores. Los jugadores notaron la diferencia. El balón era más vivo, respondía mejor al golpeo y se deslizaba sobre el césped con una velocidad endiablada, para deleite de los delanteros y pesadilla de los porteros.</p>
+                        <h4>Protagonista de un verano mágico</h4>
+                        <p>El Etrusco Unico fue el testigo de momentos que quedaron grabados en la retina de una generación. Fue el balón que Totò Schillaci, el héroe inesperado de Italia, mandó a la red una y otra vez con sus ojos desorbitados de incredulidad. Fue el que Roger Milla, el abuelo camerunés de 38 años, llevó hasta el banderín de córner para bailar tras cada gol de los "Leones Indomables". Fue el que vio las lágrimas de un Maradona lesionado, llevando a una Argentina diezmada hasta una final imposible. Y fue, finalmente, el balón que Andreas Brehme colocó con mimo en el punto de penalti en la final de Roma, antes de batir a Goycochea y darle a Alemania su tercera Copa del Mundo.</p>
+                        <p>Para muchos, el Etrusco es el balón más icónico de todos los tiempos, por encima del Tango o del Telstar. Quizás porque representa una época específica, un verano de "Notti Magiche" (Noches Mágicas), la banda sonora de aquel torneo. Era más que un esférico; era el alma de un Mundial que, a pesar de su fútbol a menudo conservador, nos regaló algunas de las imágenes más poderosas y nostálgicas de la historia de este deporte.</p>
                     </div>
                 </div>
             </div>
@@ -476,6 +529,7 @@ Liverpool presionando (4-1-5)
             // Article Filtering Logic
             filters.forEach(filter => {
                 filter.addEventListener('click', function() {
+                    showView('list'); // ALWAYS switch back to list view when a filter is clicked
                     filters.forEach(f => f.classList.remove('active'));
                     this.classList.add('active');
                     const selectedFilter = this.getAttribute('data-filter');
@@ -506,10 +560,28 @@ Liverpool presionando (4-1-5)
                         <h2>${title}</h2>
                         ${imageHTML}
                         ${fullContent}
+                        <div id="disqus_thread"></div>
                         <button class="back-btn"><<< VOLVER</button>
                     `;
                     
                     showView('viewer');
+
+                    // --- DISQUS INTEGRATION ---
+                    var disqus_config = function () {
+                        // Create a URL-friendly version of the title for the identifier
+                        const articleId = title.replace(/[^a-zA-Z0-9-]/g, '-').toLowerCase();
+                        this.page.url = window.location.href.split('?')[0] + '#' + articleId;
+                        this.page.identifier = articleId;
+                    };
+                    
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        // IMPORTANT: Replace 'balonenprofundidad' with your own Disqus shortname
+                        s.src = 'https://balonenprofundidad.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+
 
                     articleViewerContainer.querySelector('.back-btn').addEventListener('click', () => {
                         showView('list');
