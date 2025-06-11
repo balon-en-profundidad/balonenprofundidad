@@ -124,6 +124,7 @@
             font-size: 24px;
             color: #FFFF00;
             margin-bottom: 20px;
+            text-align: center;
         }
         
         .article-viewer h4 {
@@ -133,12 +134,16 @@
             margin-top: 25px;
             margin-bottom: 10px;
         }
+        
+        .article-image-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
 
         .article-viewer img {
-            max-width: 300px; /* Reduced image size */
+            max-width: 350px;
             height: auto;
-            display: block;
-            margin: 0 auto 20px auto;
             border: 4px solid #C0C0C0;
         }
 
@@ -202,148 +207,8 @@
 
         <div id="article-list">
             <h2 class="section-title">=== Últimas noticias ===</h2>
-
-            <!-- Article 1 -->
-            <div class="article-card" data-category="liga" data-date="2025-06-09">
-                <img src="https://i.imgur.com/mnjZHvI.png" alt="Imagen de Kylian Mbappé">
-                <h3>Mbappé, un pichichi insuficiente</h3>
-                <p>El francés brilla con luz propia en una temporada nefasta para el Real Madrid en lo colectivo, que se salda con la Supercopa de Europa como único y pobre botín. Un sobresaliente individual en medio de un suspenso general.</p>
-                <button class="read-more-btn">LEER MÁS >>></button>
-                <div class="full-article-content">
-                    <h4>El rey goleador de un reino en ruinas</h4>
-                    <p>Kylian Mbappé ha cumplido con su parte del trato. Aterrizó en Madrid con la vitola de ser el mejor jugador del mundo y, en el plano individual, no ha decepcionado. Su adaptación al Real Madrid y a La Liga ha sido fulgurante, finalizando la temporada como el máximo goleador del campeonato para llevarse un incontestable trofeo Pichichi. Su velocidad, desborde y, sobre todo, su definición letal han sido un faro constante en el ataque blanco, un oasis de calidad en medio de un desierto de juego colectivo. Cada galopada suya era una amenaza, cada disparo una promesa de gol. Ha sido, sin duda, el jugador más determinante del campeonato español.</p>
-                    <p>Sin embargo, su espectacular rendimiento individual, que roza la matrícula de honor, no ha sido suficiente para maquillar una temporada decepcionante a nivel de títulos, una campaña que en el argot del club se calificaría como nefasta. El francés ha sido una estrella solitaria brillando en una noche demasiado oscura.</p>
-                    <h4>La Supercopa y dos fracasos rotundos</h4>
-                    <p>El único trofeo que levantará el Real Madrid esta temporada es la Supercopa de Europa, ganada al inicio del curso contra el Atalanta en Glasgow. Un título menor para las aspiraciones y la inversión del club, que sabe a muy poco y que se ha revelado como un espejismo de lo que vendría después. A partir de ahí, el año ha sido un cúmulo de decepciones en los dos torneos que de verdad marcan el éxito o el fracaso de una temporada en Chamartín.</p>
-                    <p>En la Champions League, la competición fetiche del club, el equipo sufrió una dolorosa eliminación en semifinales ante el Bayern de Múnich. Tras un resultado esperanzador en la ida, la vuelta en el Bernabéu fue un ejercicio de impotencia, con un equipo incapaz de superar el entramado defensivo alemán, dejando una herida abierta en la afición. En La Liga, a pesar de los goles de Mbappé, la irregularidad fue la tónica. El equipo se dejó puntos inexplicables contra rivales de la parte baja y mostró una alarmante falta de solidez defensiva y un centro del campo a menudo superado. Esto le impidió luchar por el campeonato hasta el final, viéndose superado por rivales más sólidos y trabajados.</p>
-                    <h4>Un proyecto a medio construir</h4>
-                    <p>La temporada del Real Madrid se puede definir como un fracaso colectivo que deja una conclusión clara: no basta con tener al mejor jugador. El sobresaliente rendimiento de Mbappé confirma que el club ha fichado a un líder sobre el que construir el futuro, pero también expone las carencias de una plantilla que necesita ajustes urgentes para volver a ser competitiva. Su primer año deja un Pichichi y una Supercopa, pero sobre todo, la sensación de que el proyecto está a medio construir y que el francés, ahora mismo, está demasiado solo en la cima. El verano se antoja largo en Valdebebas.</p>
-                </div>
-            </div>
-
-            <!-- Article 2 -->
-            <div class="article-card" data-category="liga" data-date="2025-06-10">
-                <img src="https://i.imgur.com/PtLDxpK.png" alt="Imagen de Lamine Yamal">
-                <h3>Lamine Yamal, el faro del Barça</h3>
-                <p>Con tan solo 17 años, Lamine Yamal se ha consolidado como la estrella absoluta del FC Barcelona en la primera temporada de Hansi Flick. Analizamos su impacto, su evolución y cómo se ha convertido en la mayor esperanza culé.</p>
-                <button class="read-more-btn">LEER MÁS >>></button>
-                <div class="full-article-content">
-                     <h4>La consagración de un elegido</h4>
-                     <p>Si la temporada 2023-2024 fue su irrupción, la 2024-2025 ha sido la de su consagración definitiva. Lamine Yamal ha dejado de ser una promesa para convertirse en el jugador franquicia del FC Barcelona. En un año de transición marcado por la llegada del técnico alemán Hansi Flick y por las continuas dificultades económicas del club, el joven extremo ha sido la luz que ha guiado al equipo. Su descaro, su increíble habilidad en el uno contra uno y, sobre todo, su sorprendente madurez en la toma de decisiones, han asombrado a todo el mundo del fútbol.</p>
-                     <p>Ha finalizado la temporada con cifras de superestrella, superando la decena de goles y asistencias, siendo el jugador más determinante del equipo con una diferencia abismal. Se ha cargado al equipo a la espalda en momentos de dificultad y su influencia ha sido clave para que el Barcelona lograra asegurar sus objetivos mínimos, como la clasificación para la próxima Champions League, un pilar fundamental para la viabilidad económica de la entidad.</p>
-                     <h4>La mano de Hansi Flick</h4>
-                     <p>La llegada del técnico alemán ha sido fundamental en la evolución de Yamal. Si bien su talento ofensivo es innato y caótico, Flick ha conseguido pulir aspectos tácticos de su juego sin restarle creatividad. Yamal ha mejorado notablemente en la presión tras pérdida y en su compromiso defensivo, convirtiéndose en un jugador mucho más completo. Flick ha diseñado un sistema para potenciar sus virtudes, buscándolo constantemente en el uno contra uno y dándole libertad para moverse por todo el frente de ataque, pero exigiéndole un rigor táctico que antes no tenía.</p>
-                     <p>El equipo, aunque con altibajos lógicos y sin poder competir de tú a tú por los grandes títulos, ha mostrado una clara mejoría en la presión alta y en la condición física, señas de identidad del nuevo entrenador. Aunque se han evidenciado carencias en ciertas posiciones, la temporada se considera un paso adelante, sentando las bases de un proyecto que, con Lamine Yamal como estandarte y la disciplina de Flick en el banquillo, invita a un optimismo moderado en Can Barça.</p>
-                </div>
-            </div>
             
-            <!-- Article 3 -->
-            <div class="article-card" data-category="liga" data-date="2025-06-08">
-                <img src="https://i.imgur.com/tZCdJcs.png" alt="Imagen de Jobe Bellingham">
-                <h3>Bellingham 'vuelve' a casa</h3>
-                <p>El Borussia Dortmund lo ha vuelto a hacer. El club alemán ha oficializado el fichaje de Jobe Bellingham, hermano de Jude, continuando una saga familiar que dejó una huella imborrable en el Signal Iduna Park.</p>
-                <button class="read-more-btn">LEER MÁS >>></button>
-                <div class="full-article-content">
-                    <h4>La fórmula del éxito</h4>
-                    <p>El Borussia Dortmund sigue fiel a su filosofía de captar a los mayores talentos jóvenes del planeta, pulirlos y, a menudo, venderlos por una cifra astronómica. El último en llegar es un apellido que resuena con fuerza en la memoria reciente del club: Bellingham. Jobe, el hermano menor de la superestrella del Real Madrid, Jude, ha sido anunciado como nuevo jugador del BVB procedente del Sunderland de la segunda división inglesa. A sus 19 años, Jobe llega a la Bundesliga con la vitola de ser uno de los centrocampistas más prometedores de su generación, y la expectación en la cuenca del Ruhr es máxima.</p>
-                    <h4>La presión del apellido</h4>
-                    <p>El movimiento es una declaración de intenciones del Dortmund. Tras la millonaria venta de su hermano Jude al Real Madrid hace dos temporadas, una de las más exitosas de su historia, el club recupera a un Bellingham en una operación que, aunque de menor coste (rondando los 15 millones de euros), está cargada de simbolismo y, también, de presión para el joven futbolista.</p>
-                    <p>Jobe es un centrocampista de perfil 'box-to-box', con una gran capacidad física, buena llegada al área y una inteligencia táctica notable para su edad. Sin embargo, las comparaciones serán inevitables. La dirección deportiva del Dortmund confía en que el entorno del club, especializado en proteger y potenciar a los diamantes en bruto, sea el ecosistema perfecto para que explote todo su potencial, siguiendo el exitoso camino que ya recorrió su hermano mayor. Los aficionados del Muro Amarillo ya sueñan con verle dominar el centro del campo del Signal Iduna Park y, quién sabe, si repetir la historia.</p>
-                </div>
-            </div>
-
-            <!-- Article 4 -->
-             <div class="article-card" data-category="liga" data-date="2025-06-10">
-                <img src="https://i.imgur.com/Kc0oE6a.png" alt="Imagen de un campo de fútbol vacío">
-                <h3>La España Vaciada se queda sin fútbol</h3>
-                <p>El mapa del fútbol profesional español sufre una nueva herida. Tras una temporada agónica, el último representante de la 'España Vaciada' en Segunda ha caído, dejando a 24 provincias sin fútbol en la élite.</p>
-                <button class="read-more-btn">LEER MÁS >>></button>
-                <div class="full-article-content">
-                    <h4>El silencio de la grada</h4>
-                    <p>Es la crónica de un silencio anunciado. El pitido final de la temporada 2024-2025 ha confirmado un hecho dramático para el fútbol español: la 'España Vaciada' se ha quedado sin representación en el fútbol profesional. Por primera vez en décadas, ninguna de las 24 provincias que componen ese vasto territorio demográficamente deprimido tendrá un equipo en LaLiga EA Sports o LaLiga Hypermotion. El último bastión, que aguantó heroicamente hasta las últimas jornadas, no pudo evitar el descenso, certificando un vacío que trasciende lo deportivo para convertirse en un síntoma social.</p>
-                    <p>Provincias con una histórica tradición de fútbol modesto y resistente como Soria (Numancia), Burgos, Teruel, Palencia o Cuenca ven cómo el sueño de competir en la élite se desvanece por completo. El fútbol profesional, ese que viaja en AVE y sale en las noticias, ya no parará en sus estaciones.</p>
-                    <h4>Más que un partido</h4>
-                    <p>La pérdida de un equipo profesional supone un golpe durísimo a nivel económico y social para estas regiones. No se trata solo de fútbol. Se pierden ingresos por derechos de televisión, patrocinios, turismo y hostelería. Se pierde visibilidad mediática. Y, sobre todo, se pierde un elemento de cohesión y orgullo local que el fútbol proporciona como pocos fenómenos. El equipo de la tierra es, para muchos, el único embajador que compite de tú a tú con las grandes capitales.</p>
-                    <p>El fútbol moderno, con su creciente y desigual reparto de ingresos, sus exigencias económicas inasumibles y su concentración de poder en las grandes áreas metropolitanas, está dejando atrás a los modestos que durante años fueron el alma de la competición. La España Vaciada no solo pierde población, servicios e industria; ahora, también se queda sin sus equipos, sin una de sus últimas ilusiones de fin de semana.</p>
-                </div>
-            </div>
-            
-            <!-- Article 5 -->
-            <div class="article-card" data-category="premier" data-date="2025-06-10">
-                <img src="https://i.imgur.com/xRI8YMJ.png" alt="Imagen del Liverpool">
-                <h3>La era Slot empieza con gloria</h3>
-                <p>Contra todo pronóstico, el Liverpool de Arne Slot se ha proclamado campeón de la Premier League 2024-2025, superando al City y Arsenal en una temporada que marca el inicio exitoso de una nueva era en Anfield.</p>
-                <button class="read-more-btn">LEER MÁS >>></button>
-                <div class="full-article-content">
-                    <h4>El relevo imposible</h4>
-                    <p>La marcha de Jürgen Klopp al final de la temporada pasada dejó un vacío gigantesco y un mar de dudas en Anfield. El carismático alemán era más que un entrenador; era el alma del equipo. La llegada del neerlandés Arne Slot, un técnico respetado por su trabajo en el Feyenoord pero sin experiencia en una de las cinco grandes ligas, fue recibida con escepticismo por gran parte de la crítica y la afición. ¿Sería capaz de gestionar la presión y continuar el legado de uno de los entrenadores más queridos de la historia del club? La respuesta, al final de la temporada 2024-2025, es un sí rotundo y resonante. El Liverpool es el nuevo campeón de la Premier League.</p>
-                    <h4>Las claves del campeón</h4>
-                    <p>Slot ha demostrado una inteligencia táctica y una capacidad de gestión de grupo extraordinarias. Lejos de intentar una ruptura total con el pasado, ha construido sobre los sólidos cimientos de Klopp, introduciendo matices de su propio estilo: una presión aún más organizada y zonal, y una mayor fluidez posicional en ataque. El equipo ha respondido con una temporada de una regularidad asombrosa, convirtiendo Anfield en un fortín inexpugnable y mostrando una fortaleza mental admirable en los partidos a domicilio.</p>
-                    <p>Varias han sido las claves de este éxito inesperado. Primero, el liderazgo de los veteranos. Un imperial Virgil van Dijk ha firmado una de sus mejores temporadas, erigiéndose como un muro infranqueable en defensa, mientras que Mohamed Salah, acallando los rumores sobre su futuro, ha vuelto a superar la barrera de los 25 goles. Segundo, la explosión definitiva de Darwin Núñez. El uruguayo, bajo la confianza de Slot, ha pulido su definición y ha sido una pesadilla constante para las defensas rivales. Por último, el centro del campo, con un Alexis Mac Allister excelso como director de orquesta, ha sido el motor del equipo. La conquista de la Premier League por parte del Liverpool es una de las grandes historias del fútbol europeo recente, un nuevo amanecer 'red' que demuestra, contra todo pronóstico, que hay vida después de Klopp.</p>
-                </div>
-            </div>
-
-            <!-- Article 6 -->
-            <div class="article-card" data-category="premier" data-date="2025-06-10">
-                <img src="https://i.imgur.com/2L2HY9S.png" alt="Imagen del Manchester United">
-                <h3>Anatomía de un desastre: Man Utd</h3>
-                <p>La temporada 2024-2025 del Manchester United ha sido un fracaso rotundo. El equipo ha finalizado en novena posición, consumando una de las peores campañas de su historia reciente y quedando fuera de Europa.</p>
-                <button class="read-more-btn">LEER MÁS >>></button>
-                <div class="full-article-content">
-                    <h4>El teatro de las pesadillas</h4>
-                    <p>Old Trafford, el autoproclamado 'Teatro de los Sueños', se ha convertido en el escenario de una pesadilla recurrente y cada vez más profunda. La temporada 2024-2025 del Manchester United ha sido la confirmación de una crisis deportiva y estructural que parece no tener fin. A pesar de la fuerte inversión y de la llegada de la nueva dirección deportiva de INEOS, liderada por Sir Jim Ratcliffe con la promesa de un cambio de rumbo, el equipo ha dado un vergonzoso paso atrás, finalizando en una humillante novena posición en la Premier League. El resultado: fuera de todas las competiciones europeas para la próxima campaña, un golpe deportivo y económico de dimensiones catastróficas.</p>
-                     <h4>Señales de un equipo roto</h4>
-                    <p>La decisión de traer al portugués Ruben Amorim casi al inicio de temporada no ha dado sus frutos. El equipo nunca encontró un patrón de juego reconocible, mostrándose como un conjunto anárquico, extraordinariamente frágil en defensa y desesperadamente previsible en ataque. Las lesiones han sido un factor, sí, pero no pueden servir como única excusa para un rendimiento tan pobre que ha incluido goleadas sonrojantes y una incapacidad manifiesta para competir contra los grandes equipos.</p>
-                    <p>El fracaso ha sido colectivo, pero varios nombres quedan señalados. Marcus Rashford ha completado su temporada más decepcionante, con cifras goleadoras ínfimas y una actitud apática que ha sido duramente cuestionada, acabando cedido en el Aston Villa y demostrando que fuera de Manchester no hay "tantos" problemas. Casemiro ha mostrado un declive físico alarmante, viéndose superado constantemente. Fichajes millonarios como Antony siguen sin justificar una fracción de su coste, y la irregularidad ha sido la norma en casi toda la plantilla. El Manchester United se enfrenta a un verano crucial. La temporada ha sido un fracaso sin paliativos que obliga a tomar decisiones drásticas y dolorosas para intentar acabar con una era de mediocridad que se ha alargado demasiado.</p>
-                </div>
-            </div>
-
-            <!-- Article 7 -->
-             <div class="article-card" data-category="internacional" data-date="2025-06-10">
-                <img src="https://i.imgur.com/ZvfrnDT.png" alt="Imagen de Pulisic y Donovan">
-                <h3>Adiós al 'Capitán América': guerra Pulisic-Donovan</h3>
-                <p>La selección de Estados Unidos vive una crisis interna sin precedentes. La relación entre Christian Pulisic y la leyenda Landon Donovan está completamente rota, con acusaciones de "falta de respeto" que amenazan el proyecto del USMNT.</p>
-                <button class="read-more-btn">LEER MÁS >>></button>
-                <div class="full-article-content">
-                    <h4>Una fractura expuesta</h4>
-                    <p>El vestuario de la selección masculina de fútbol de Estados Unidos es un polvorín. Lo que era un secreto a voces ha estallado públicamente, dejando al descubierto una fractura profunda entre dos generaciones. La relación entre la actual estrella y capitán, Christian Pulisic, y el mejor jugador de la historia del país, Landon Donovan, es inexistente. En una entrevista reciente para un podcast, Donovan, actual analista de televisión, ha sido demoledor: "Hay una falta de respeto por parte de Christian. No solo hacia mí, sino hacia muchos exjugadores que hemos construido lo que él disfruta ahora. No ha mostrado ningún interés en conocer nuestra historia, en saber de dónde viene todo esto".</p>
-                    <h4>El choque de dos mundos</h4>
-                    <p>Estas duras palabras confirman un choque cultural que viene de lejos. Fuentes cercanas al equipo hablan de un Pulisic distante, con un carácter forjado en Europa (Dortmund, Chelsea, Milan) que choca con la cultura más gregaria y de equipo del fútbol estadounidense. El jugador del AC Milan se siente el líder indiscutible y no acepta de buen grado las críticas de las viejas glorias, a quienes considera parte de un pasado ya superado. Donovan, por su parte, representa a una generación que luchó por poner al 'soccer' en el mapa y que reclama un mínimo de reconocimiento y humildad.</p>
-                    <p>Esta guerra abierta entre el pasado y el presente del 'soccer' llega en el peor momento posible, a las puertas de una Copa América donde Estados Unidos es anfitrión y a solo un año del Mundial de 2026, el mayor evento futbolístico de su historia. La federación tiene un problema mayúsculo entre manos: mediar para reconducir la situación o arriesgarse a que el choque de egos devore un proyecto que parecía destinado al éxito.</p>
-                </div>
-            </div>
-
-            <!-- Article 8 -->
-             <div class="article-card" data-category="internacional" data-date="2025-06-09">
-                <img src="https://i.imgur.com/Gh7iHLn.png" alt="Imagen de la bandera de Groenlandia">
-                <h3>La CONCACAF le dice 'no' a Groenlandia</h3>
-                <p>El sueño de Groenlandia de unirse a la familia del fútbol se ha topado con un muro. La CONCACAF ha rechazado su solicitud de afiliación, dejando a la isla helada en un limbo deportivo y avivando el debate sobre su futuro.</p>
-                <button class="read-more-btn">LEER MÁS >>></button>
-                <div class="full-article-content">
-                    <h4>Un sueño congelado</h4>
-                    <p>La Federación de Fútbol de Groenlandia ha recibido un duro revés a sus aspiraciones de competir a nivel internacional. La CONCACAF, la confederación de Norteamérica, Centroamérica y el Caribe a la que aspiraban a unirse por proximidad geográfica, ha denegado formalmente su petición para convertirse en miembro de pleno derecho. La decisión, basada en "criterios estatutarios no cumplidos", deja a la selección groenlandesa fuera de la posibilidad de competir en torneos oficiales como la Copa Oro o la clasificación para el Mundial, un golpe para un país que ha invertido mucho en desarrollar su fútbol.</p>
-                    <h4>El laberinto político y la vía europea</h4>
-                    <p>El principal escollo parece ser el estatus político de Groenlandia. Aunque geográficamente americana, es un territorio autónomo perteneciente al Reino de Dinamarca. A diferencia de las Islas Feroe, otro territorio danés que sí es miembro de pleno derecho de la UEFA, CONCACAF ha adoptado una postura más estricta con respecto a la soberanía nacional de sus miembros.</p>
-                     <p>La federación groenlandesa, que ya está construyendo estadios con césped artificial capaces de resistir el clima extremo y que ha puesto en marcha una liga local cada vez más competitiva, se siente decepcionada y ahora estudia sus opciones. La posibilidad de intentar unirse a la UEFA, siguiendo el precedente de las Feroe o Gibraltar, está sobre la mesa, aunque logísticamente sería un desafío mucho mayor. El 'no' de la CONCACAF no es el final del camino, pero sí un obstáculo inesperado para un país que solo quiere el derecho a jugar al fútbol.</p>
-                </div>
-            </div>
-
-            <!-- Article 9 -->
-             <div class="article-card" data-category="internacional" data-date="2025-06-10">
-                <img src="https://i.imgur.com/0Z1JYa8.png" alt="Imagen de un chip de ordenador">
-                <h3>El 'Superordenador' gafe y el Mundial de Clubes</h3>
-                <p>Un famoso superordenador ha dictado sentencia: el Manchester City es el gran favorito para ganar el nuevo Mundial de Clubes de 2025. Una predicción que, por su historial de errores, ha provocado más burlas que confianza.</p>
-                <button class="read-more-btn">LEER MÁS >>></button>
-                <div class="full-article-content">
-                    <h4>La dictadura del algoritmo</h4>
-                    <p>En la era del Big Data y la inteligencia artificial, las predicciones basadas en complejos algoritmos se han convertido en un clásico antes de cada gran torneo. Y el nuevo y expandido Mundial de Clubes de 2025, con su formato de 32 equipos, no es una excepción. Un conocido 'superordenador' de una empresa de análisis de datos ha publicado su pronóstico tras procesar millones de variables, y el resultado es claro: el Manchester City de Pep Guardiola es el máximo favorito para alzarse con el título, otorgándole un 28.3% de probabilidades. Le siguen, a una distancia considerable, el Real Madrid (15.4%) y el Bayern de Múnich (11.2%).</p>
-                    <h4>La maldición del favorito</h4>
-                    <p>Sin embargo, la noticia ha sido recibida con una oleada de escepticismo y humor en las redes sociales. ¿El motivo? La merecida reputación 'gafe' de este superordenador, que acumula un historial de errores notables en sus predicciones de grandes eventos. Falló estrepitosamente en el último Mundial de selecciones, en varias finales de Champions League y en campeonatos de liga, a menudo señalando como campeón a un equipo que acababa sufriendo una eliminación inesperada.</p>
-                    <p>Por ello, los aficionados de los equipos rivales han acogido la noticia como la mejor de las suertes, bromeando con que el favoritismo del City es ahora su mayor maldición y una garantía de que no ganarán el torneo. Mientras la ciencia de datos intenta abrirse paso en el deporte, el componente impredecible, pasional y mágico del fútbol parece, de momento, resistirse a ser encerrado en un frío y, a menudo, equivocado algoritmo.</p>
-                </div>
-
-                 <!-- Article 10 -->
-                 <div class="article-card" data-category="internacional" data-date="2025-06-11">
+            <div class="article-card" data-category="internacional" data-date="2025-06-11">
                 <img src="https://i.imgur.com/mRszapq.png" alt="Imagen de la selección chilena de fútbol">
                 <h3>Un eco de desilusión: Chile y la ausencia prolongada del Mundial</h3>
                 <p>La selección chilena vuelve a quedarse fuera de una Copa del Mundo. La derrota ante Bolivia fue el golpe de gracia a un proceso eliminatorio para el olvido, sumiendo al país en una profunda reflexión sobre el futuro de "La Roja".</p>
@@ -361,7 +226,147 @@
                 </div>
             </div>
 
-            <!-- TACTICS -->
+            <div class="article-card" data-category="liga" data-date="2025-06-10">
+                <img src="https://i.imgur.com/mnjZHvI.png" alt="Imagen de Kylian Mbappé">
+                <h3>Mbappé, un pichichi insuficiente</h3>
+                <p>El francés brilla con luz propia en una temporada nefasta para el Real Madrid en lo colectivo, que se salda con la Supercopa de Europa como único y pobre botín. Un sobresaliente individual en medio de un suspenso general.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>Un desembarco estelar y una cosecha individual histórica</h4>
+                    <p>A la espera de la oficialización de su fichaje por el Real Madrid, que se produjo el 3 de junio de 2024, la expectación era máxima. Tras años de rumores y especulaciones, Kylian Mbappé finalmente se unía al club blanco en una transferencia que prometía cambiar el panorama del fútbol europeo. Sin embargo, su primera temporada en el Santiago Bernabéu, la 2024-2025, ha dejado un sabor agridulce: un éxito individual rotundo empañado por una decepción colectiva significativa para el Real Madrid.</p>
+                    <p>La llegada de Mbappé al Real Madrid se confirmó con un contrato de cinco años, hasta 2029, y un paquete financiero que, aunque sin coste de traspaso al llegar libre, incluía una prima de fichaje de entre 100 y 150 millones de euros, y un salario neto anual de alrededor de 15 millones de euros. Estas cifras lo consolidaron como una de las piezas angulares del proyecto madridista, uniéndose a talentos como Vinicius Jr. y Jude Bellingham para formar una ofensiva de ensueño.</p>
+                    <p>Desde el primer momento, Mbappé demostró su valía en el plano personal. Se erigió como el máximo goleador de La Liga, alzándose con el prestigioso Trofeo Pichichi con 31 goles, una cifra que también le valió la Bota de Oro Europea, el galardón al máximo goleador de las ligas europeas. Estas distinciones individuales no solo certifican su poderío ofensivo, sino que también marcan un hito: es el primer jugador del Real Madrid en ganar la Bota de Oro desde Cristiano Ronaldo en 2015, y el primero en superar los 30 goles en liga desde Lionel Messi en 2019. En total, Mbappé cerró la campaña 2024-2025 con 42 goles en 55 apariciones en todas las competiciones para el Real Madrid, un registro formidable para cualquier debutante.</p>
+                    <h4>El contraste colectivo: una temporada por debajo de las expectativas</h4>
+                    <p>A pesar de la brillantez individual de Mbappé, el Real Madrid no logró traducir ese rendimiento en el éxito colectivo esperado en las competiciones más importantes. Si bien el equipo conquistó la Supercopa de Europa y la Copa Intercontinental de la FIFA, trofeos tempranos en la temporada, se quedó corto en los objetivos de mayor envergadura: La Liga, la Copa del Rey y la Supercopa de España, donde fue subcampeón. La mayor decepción llegó en la UEFA Champions League, donde el Real Madrid fue eliminado en los cuartos de final, un resultado inusual para un club con su historial en la competición. Este desempeño colectivo ha generado un considerable debate y críticas, especialmente porque la llegada de Mbappé se perfilaba como el impulso definitivo para dominar tanto a nivel nacional como continental.</p>
+                    <h4>Desafíos tácticos y de integración</h4>
+                    <p>La paradoja entre el éxito individual de Mbappé y el fracaso colectivo del equipo ha llevado a un análisis profundo de su impacto táctico. Si bien sus goles son incuestionables, la integración de Mbappé en el esquema de Carlo Ancelotti no ha sido del todo fluida. El francés tiende a gravitar hacia la banda izquierda, su zona de confort, y a menudo no ofrece la presencia de un delantero centro puro que fije a los defensores o realice desmarques al espacio.</p>
+                    <p>Además, su compromiso defensivo ha sido un punto de crítica. La reticencia de Mbappé a realizar un trabajo intenso sin balón ha sido señalada como un factor que ha afectado la coherencia defensiva del equipo, obligando a sus compañeros a realizar un esfuerzo extra. Algunos análisis sugieren que, en ocasiones, la abundancia de talento ofensivo con Mbappé, Vinicius y Bellingham ha llevado a una "superpoblación" en zonas de ataque, dejando el área sin referencias y afectando la profundidad del juego. A pesar de sus goles, la dinámica del equipo no siempre encontró el equilibrio necesario para competir al máximo nivel en todas las competiciones.</p>
+                    <h4>Un futuro por escribir</h4>
+                    <p>La temporada 2024-2025 ha sido un claro recordatorio de que en el fútbol, el rendimiento individual, por brillante que sea, no siempre garantiza el éxito colectivo. La llegada de Mbappé al Real Madrid, aunque celebrada con entusiasmo, ha reabierto el debate sobre los "Galácticos" y los desafíos de integrar a superestrellas sin sacrificar el equilibrio del equipo, una lección que el club ya aprendió en eras anteriores. Con la mira puesta en la próxima campaña, el Real Madrid y Mbappé enfrentan el desafío de transformar la excelsa producción individual del francés en un triunfo compartido. La ambición es clara: convertir los goles y la magia de su nueva estrella en títulos que satisfagan la insaciable sed de victoria del madridismo.</p>
+                </div>
+            </div>
+
+            <div class="article-card" data-category="liga" data-date="2025-06-10">
+                <img src="https://i.imgur.com/PtLDxpK.png" alt="Imagen de Lamine Yamal">
+                <h3>Lamine Yamal: Más valioso que nadie</h3>
+                <p>Con solo 17 años, las cifras de mercado y su impacto en el campo sitúan a Lamine Yamal en una categoría propia. Analizamos por qué el joven talento del Barça ya es considerado el activo más valioso del fútbol mundial.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>Un fenómeno sin precedentes</h4>
+                    <p>En el vertiginoso mundo del fútbol moderno, donde los talentos emergen y se desvanecen con la misma rapidez, Lamine Yamal ha irrumpido como un fenómeno sin precedentes. No es simplemente una promesa brillante para el futuro, sino un jugador que, con una madurez y un impacto asombrosos, ha reescrito las expectativas y redefinido lo que es posible para un adolescente en la élite. Su nombre resuena en los estadios y en los despachos, no solo como una estrella en ascenso, sino como una fuerza que ya domina el panorama futbolístico mundial.</p>
+                    <p>La trayectoria de Yamal, forjada en la célebre cantera de La Masia del FC Barcelona, ha sido nada menos que extraordinaria. Su ascenso al primer equipo en la temporada 2023-24 fue meteórico. Desde su irrupción, ha demostrado ser un futbolista que no solo promete, sino que ya está decidiendo partidos al más alto nivel para su club y la selección española. Esta capacidad de influir de inmediato en el juego, superando la fase de desarrollo gradual que la mayoría de los jóvenes talentos requieren, ha comprimido su "potencial" en un "valor presente" inigualable. Esta rareza, la de un jugador que alcanza la élite y la domina tan precozmente, es un factor fundamental que contribuye a su valoración única en el mercado.</p>
+                    <h4>La cifra que rompe moldes: su valor de mercado inigualable</h4>
+                    <p>La prueba más contundente del valor sin parangón de Lamine Yamal proviene de las plataformas analíticas líderes que rastrean el valor de mercado de los futbolistas. El CIES Football Observatory, un grupo de investigación conocido por sus rigurosos modelos estadísticos, ha valorado a Lamine Yamal en la asombrosa cifra de 402,3 millones de euros. Esta cifra lo sitúa significativamente por encima de cualquier otra superestrella global, un testimonio de su perfil único en el fútbol.</p>
+                    <p>Por su parte, Transfermarkt, una base de datos futbolística ampliamente consultada, aunque más conservadora, ha actualizado la valoración de Yamal a 200 millones de euros. Esta cifra lo convierte en el jugador más valioso del mundo según sus métricas, superando récords anteriores. Para comprender verdaderamente la magnitud de estas cifras, es esencial comparar la valoración de Yamal con la de gigantes del fútbol ya establecidos como Erling Haaland o Kylian Mbappé. Resulta aún más notable que Lionel Messi, en la cúspide de su carrera en 2018, alcanzó una valoración de Transfermarkt de 180 millones de euros, una cifra que Yamal ya ha superado con tan solo 17 años.</p>
+                    <h4>Una trayectoria de récords</h4>
+                    <p>La irrupción de Lamine Yamal en el fútbol profesional ha sido un asalto implacable a los libros de récords. Se convirtió en el jugador más joven en ser titular y dar una asistencia en LaLiga, el debutante más joven del Barça en Champions y, más tarde, el titular más joven en la historia de la competición, rompiendo récords de décadas. El 8 de octubre de 2023, grabó su nombre como el goleador más joven de la historia de LaLiga.</p>
+                    <p>Su impacto se extiende a la selección española, donde debutó y marcó siendo también el más joven en la historia. Fue pieza fundamental en la victoria de España en la Eurocopa 2024, donde fue nombrado Mejor Jugador Joven del Torneo, estableciendo más récords de precocidad. Este nivel de rendimiento decisivo a una edad tan temprana transforma su percepción de mero "potencial" a "jugador probado", reduciendo el riesgo percibido para cualquier club y justificando su altísima valoración.</p>
+                    <h4>El genio en el campo: atributos que marcan la diferencia</h4>
+                    <p>Las capacidades de Lamine Yamal en el terreno de juego son una mezcla de talento innato y habilidad refinada. Posee un control del balón excepcional, combinando toques sutiles con movimientos explosivos. Su centro de gravedad bajo le proporciona un equilibrio superior, convirtiéndolo en un regateador increíblemente eficaz. A esto se suma un primer paso eléctrico que le permite superar a los defensores en espacios reducidos. Más allá de sus dotes físicas, su atributo más llamativo es su inteligencia futbolística, una cualidad rara en jugadores que le doblan la edad. Demuestra una capacidad de élite para procesar el juego, leer las defensas y tomar decisiones en fracciones de segundo bajo presión.</p>
+                    <h4>El activo estratégico: más allá del terreno de juego</h4>
+                    <p>La valoración de Lamine Yamal trasciende su brillantez en el campo. Su edad (17 años), un contrato blindado hasta 2031 y la alta demanda de los clubes de élite amplifican su valor. El FC Barcelona lo ve no solo como un futbolista excepcional, sino como la piedra angular y el líder simbólico de su era post-Messi, una encarnación viva de la identidad del club y la filosofía de La Masia. La estrategia del club es asegurarlo a largo plazo, viéndolo como un generador de ingresos crucial a través de la marca global y el éxito deportivo. Es una apuesta estratégica que su valor futuro superará con creces la tensión financiera inmediata, transformándolo en un activo crucial para la estabilidad y el prestigio del club.</p>
+                </div>
+            </div>
+            
+            <div class="article-card" data-category="liga" data-date="2025-06-10">
+                <img src="https://i.imgur.com/tZCdJcs.png" alt="Imagen de Jobe Bellingham">
+                <h3>Bellingham 'vuelve' a casa</h3>
+                <p>El Borussia Dortmund lo ha vuelto a hacer. El club alemán ha oficializado el fichaje de Jobe Bellingham, hermano de Jude, continuando una saga familiar que dejó una huella imborrable en el Signal Iduna Park.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>La fórmula del éxito</h4>
+                    <p>El Borussia Dortmund sigue fiel a su filosofía de captar a los mayores talentos jóvenes del planeta, pulirlos y, a menudo, venderlos por una cifra astronómica. El último en llegar es un apellido que resuena con fuerza en la memoria reciente del club: Bellingham. Jobe, el hermano menor de la superestrella del Real Madrid, Jude, ha sido anunciado como nuevo jugador del BVB procedente del Sunderland de la segunda división inglesa. A sus 19 años, Jobe llega a la Bundesliga con la vitola de ser uno de los centrocampistas más prometedores de su generación, y la expectación en la cuenca del Ruhr es máxima.</p>
+                    <h4>La presión del apellido</h4>
+                    <p>El movimiento es una declaración de intenciones del Dortmund. Tras la millonaria venta de su hermano Jude al Real Madrid hace dos temporadas, una de las más exitosas de su historia, el club recupera a un Bellingham en una operación que, aunque de menor coste (rondando los 15 millones de euros), está cargada de simbolismo y, también, de presión para el joven futbolista.</p>
+                    <p>Jobe es un centrocampista de perfil 'box-to-box', con una gran capacidad física, buena llegada al área y una inteligencia táctica notable para su edad. Sin embargo, las comparaciones serán inevitables. La dirección deportiva del Dortmund confía en que el entorno del club, especializado en proteger y potenciar a los diamantes en bruto, sea el ecosistema perfecto para que explote todo su potencial, siguiendo el exitoso camino que ya recorrió su hermano mayor. Los aficionados del Muro Amarillo ya sueñan con verle dominar el centro del campo del Signal Iduna Park y, quién sabe, si repetir la historia.</p>
+                </div>
+            </div>
+
+             <div class="article-card" data-category="liga" data-date="2025-06-10">
+                <img src="https://i.imgur.com/Kc0oE6a.png" alt="Imagen de un campo de fútbol vacío">
+                <h3>La España Vaciada se queda sin fútbol</h3>
+                <p>El mapa del fútbol profesional español sufre una nueva herida. Tras una temporada agónica, el último representante de la 'España Vaciada' en Segunda ha caído, dejando a 24 provincias sin fútbol en la élite.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>El silencio de la grada</h4>
+                    <p>Es la crónica de un silencio anunciado. El pitido final de la temporada 2024-2025 ha confirmado un hecho dramático para el fútbol español: la 'España Vaciada' se ha quedado sin representación en el fútbol profesional. Por primera vez en décadas, ninguna de las 24 provincias que componen ese vasto territorio demográficamente deprimido tendrá un equipo en LaLiga EA Sports o LaLiga Hypermotion. El último bastión, que aguantó heroicamente hasta las últimas jornadas, no pudo evitar el descenso, certificando un vacío que trasciende lo deportivo para convertirse en un síntoma social.</p>
+                    <p>Provincias con una histórica tradición de fútbol modesto y resistente como Soria (Numancia), Burgos, Teruel, Palencia o Cuenca ven cómo el sueño de competir en la élite se desvanece por completo. El fútbol profesional, ese que viaja en AVE y sale en las noticias, ya no parará en sus estaciones.</p>
+                    <h4>Más que un partido</h4>
+                    <p>La pérdida de un equipo profesional supone un golpe durísimo a nivel económico y social para estas regiones. No se trata solo de fútbol. Se pierden ingresos por derechos de televisión, patrocinios, turismo y hostelería. Se pierde visibilidad mediática. Y, sobre todo, se pierde un elemento de cohesión y orgullo local que el fútbol proporciona como pocos fenómenos. El equipo de la tierra es, para muchos, el único embajador que compite de tú a tú con las grandes capitales.</p>
+                    <p>El fútbol moderno, con su creciente y desigual reparto de ingresos, sus exigencias económicas inasumibles y su concentración de poder en las grandes áreas metropolitanas, está dejando atrás a los modestos que durante años fueron el alma de la competición. La España Vaciada no solo pierde población, servicios e industria; ahora, también se queda sin sus equipos, sin una de sus últimas ilusiones de fin de semana.</p>
+                </div>
+            </div>
+            
+            <div class="article-card" data-category="premier" data-date="2025-06-09">
+                <img src="https://i.imgur.com/xRI8YMJ.png" alt="Imagen del Liverpool">
+                <h3>La era Slot empieza con gloria</h3>
+                <p>Contra todo pronóstico, el Liverpool de Arne Slot se ha proclamado campeón de la Premier League 2024-2025, superando al City y Arsenal en una temporada que marca el inicio exitoso de una nueva era en Anfield.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>El relevo imposible</h4>
+                    <p>La marcha de Jürgen Klopp al final de la temporada pasada dejó un vacío gigantesco y un mar de dudas en Anfield. El carismático alemán era más que un entrenador; era el alma del equipo. La llegada del neerlandés Arne Slot, un técnico respetado por su trabajo en el Feyenoord pero sin experiencia en una de las cinco grandes ligas, fue recibida con escepticismo por gran parte de la crítica y la afición. ¿Sería capaz de gestionar la presión y continuar el legado de uno de los entrenadores más queridos de la historia del club? La respuesta, al final de la temporada 2024-2025, es un sí rotundo y resonante. El Liverpool es el nuevo campeón de la Premier League.</p>
+                    <h4>Las claves del campeón</h4>
+                    <p>Slot ha demostrado una inteligencia táctica y una capacidad de gestión de grupo extraordinarias. Lejos de intentar una ruptura total con el pasado, ha construido sobre los sólidos cimientos de Klopp, introduciendo matices de su propio estilo: una presión aún más organizada y zonal, y una mayor fluidez posicional en ataque. El equipo ha respondido con una temporada de una regularidad asombrosa, convirtiendo Anfield en un fortín inexpugnable y mostrando una fortaleza mental admirable en los partidos a domicilio.</p>
+                    <p>Varias han sido las claves de este éxito inesperado. Primero, el liderazgo de los veteranos. Un imperial Virgil van Dijk ha firmado una de sus mejores temporadas, erigiéndose como un muro infranqueable en defensa, mientras que Mohamed Salah, acallando los rumores sobre su futuro, ha vuelto a superar la barrera de los 25 goles. Segundo, la explosión definitiva de Darwin Núñez. El uruguayo, bajo la confianza de Slot, ha pulido su definición y ha sido una pesadilla constante para las defensas rivales. Por último, el centro del campo, con un Alexis Mac Allister excelso como director de orquesta, ha sido el motor del equipo. La conquista de la Premier League por parte del Liverpool es una de las grandes historias del fútbol europeo recente, un nuevo amanecer 'red' que demuestra, contra todo pronóstico, que hay vida después de Klopp.</p>
+                </div>
+            </div>
+
+            <div class="article-card" data-category="premier" data-date="2025-06-09">
+                <img src="https://i.imgur.com/E5CIpLW.png" alt="Imagen del Manchester United">
+                <h3>Anatomía de un desastre: Man Utd</h3>
+                <p>La temporada 2024-2025 del Manchester United ha sido un fracaso rotundo. El equipo ha finalizado en novena posición, consumando una de las peores campañas de su historia reciente y quedando fuera de Europa.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>El teatro de las pesadillas</h4>
+                    <p>Old Trafford, el autoproclamado 'Teatro de los Sueños', se ha convertido en el escenario de una pesadilla recurrente y cada vez más profunda. La temporada 2024-2025 del Manchester United ha sido la confirmación de una crisis deportiva y estructural que parece no tener fin. A pesar de la fuerte inversión y de la llegada de la nueva dirección deportiva de INEOS, liderada por Sir Jim Ratcliffe con la promesa de un cambio de rumbo, el equipo ha dado un vergonzoso paso atrás, finalizando en una humillante novena posición en la Premier League. El resultado: fuera de todas las competiciones europeas para la próxima campaña, un golpe deportivo y económico de dimensiones catastróficas.</p>
+                     <h4>Señales de un equipo roto</h4>
+                    <p>La decisión de mantener a Erik ten Hag en el banquillo tras un verano de incertidumbre se ha demostrado como un error fatal. El equipo nunca encontró un patrón de juego reconocible, mostrándose como un conjunto anárquico, extraordinariamente frágil en defensa y desesperadamente previsible en ataque. Las lesiones han sido un factor, sí, pero no pueden servir como única excusa para un rendimiento tan pobre que ha incluido goleadas sonrojantes y una incapacidad manifiesta para competir contra los grandes equipos.</p>
+                    <p>El fracaso ha sido colectivo, pero varios nombres quedan señalados. Marcus Rashford ha completado su temporada más decepcionante, con cifras goleadoras ínfimas y una actitud apática que ha sido duramente cuestionada. Casemiro ha mostrado un declive físico alarmante, viéndose superado constantemente. Fichajes millonarios como Antony siguen sin justificar una fracción de su coste, y la irregularidad ha sido la norma en casi toda la plantilla. El Manchester United se enfrenta a un verano crucial. La temporada ha sido un fracaso sin paliativos que obliga a tomar decisiones drásticas y dolorosas para intentar acabar con una era de mediocridad que se ha alargado demasiado.</p>
+                </div>
+            </div>
+
+             <div class="article-card" data-category="internacional" data-date="2025-06-09">
+                <img src="https://i.imgur.com/ZvfrnDT.png" alt="Imagen de Pulisic y Donovan">
+                <h3>Adiós al 'Capitán América': guerra Pulisic-Donovan</h3>
+                <p>La selección de Estados Unidos vive una crisis interna sin precedentes. La relación entre Christian Pulisic y la leyenda Landon Donovan está completamente rota, con acusaciones de "falta de respeto" que amenazan el proyecto del USMNT.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>Una fractura expuesta</h4>
+                    <p>El vestuario de la selección masculina de fútbol de Estados Unidos es un polvorín. Lo que era un secreto a voces ha estallado públicamente, dejando al descubierto una fractura profunda entre dos generaciones. La relación entre la actual estrella y capitán, Christian Pulisic, y el mejor jugador de la historia del país, Landon Donovan, es inexistente. En una entrevista reciente para un podcast, Donovan, actual analista de televisión, ha sido demoledor: "Hay una falta de respeto por parte de Christian. No solo hacia mí, sino hacia muchos exjugadores que hemos construido lo que él disfruta ahora. No ha mostrado ningún interés en conocer nuestra historia, en saber de dónde viene todo esto".</p>
+                    <h4>El choque de dos mundos</h4>
+                    <p>Estas duras palabras confirman un choque cultural que viene de lejos. Fuentes cercanas al equipo hablan de un Pulisic distante, con un carácter forjado en Europa (Dortmund, Chelsea, Milan) que choca con la cultura más gregaria y de equipo del fútbol estadounidense. El jugador del AC Milan se siente el líder indiscutible y no acepta de buen grado las críticas de las viejas glorias, a quienes considera parte de un pasado ya superado. Donovan, por su parte, representa a una generación que luchó por poner al 'soccer' en el mapa y que reclama un mínimo de reconocimiento y humildad.</p>
+                    <p>Esta guerra abierta entre el pasado y el presente del 'soccer' llega en el peor momento posible, a las puertas de una Copa América donde Estados Unidos es anfitrión y a solo un año del Mundial de 2026, el mayor evento futbolístico de su historia. La federación tiene un problema mayúsculo entre manos: mediar para reconducir la situación o arriesgarse a que el choque de egos devore un proyecto que parecía destinado al éxito.</p>
+                </div>
+            </div>
+
+             <div class="article-card" data-category="internacional" data-date="2025-06-10">
+                <img src="https://i.imgur.com/Gh7iHLn.png" alt="Imagen de la bandera de Groenlandia">
+                <h3>La CONCACAF le dice 'no' a Groenlandia</h3>
+                <p>El sueño de Groenlandia de unirse a la familia del fútbol se ha topado con un muro. La CONCACAF ha rechazado su solicitud de afiliación, dejando a la isla helada en un limbo deportivo y avivando el debate sobre su futuro.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>Un sueño congelado</h4>
+                    <p>La Federación de Fútbol de Groenlandia ha recibido un duro revés a sus aspiraciones de competir a nivel internacional. La CONCACAF, la confederación de Norteamérica, Centroamérica y el Caribe a la que aspiraban a unirse por proximidad geográfica, ha denegado formalmente su petición para convertirse en miembro de pleno derecho. La decisión, basada en "criterios estatutarios no cumplidos", deja a la selección groenlandesa fuera de la posibilidad de competir en torneos oficiales como la Copa Oro o la clasificación para el Mundial, un golpe para un país que ha invertido mucho en desarrollar su fútbol.</p>
+                    <h4>El laberinto político y la vía europea</h4>
+                    <p>El principal escollo parece ser el estatus político de Groenlandia. Aunque geográficamente americana, es un territorio autónomo perteneciente al Reino de Dinamarca. A diferencia de las Islas Feroe, otro territorio danés que sí es miembro de pleno derecho de la UEFA, CONCACAF ha adoptado una postura más estricta con respecto a la soberanía nacional de sus miembros.</p>
+                     <p>La federación groenlandesa, que ya está construyendo estadios con césped artificial capaces de resistir el clima extremo y que ha puesto en marcha una liga local cada vez más competitiva, se siente decepcionada y ahora estudia sus opciones. La posibilidad de intentar unirse a la UEFA, siguiendo el precedente de las Feroe o Gibraltar, está sobre la mesa, aunque logísticamente sería un desafío mucho mayor. El 'no' de la CONCACAF no es el final del camino, pero sí un obstáculo inesperado para un país que solo quiere el derecho a jugar al fútbol.</p>
+                </div>
+            </div>
+
+             <div class="article-card" data-category="internacional" data-date="2025-06-09">
+                <img src="https://i.imgur.com/0Z1JYa8.png" alt="Imagen de un chip de ordenador">
+                <h3>El 'Superordenador' gafe y el Mundial de Clubes</h3>
+                <p>Un famoso superordenador ha dictado sentencia: el Manchester City es el gran favorito para ganar el nuevo Mundial de Clubes de 2025. Una predicción que, por su historial de errores, ha provocado más burlas que confianza.</p>
+                <button class="read-more-btn">LEER MÁS >>></button>
+                <div class="full-article-content">
+                    <h4>La dictadura del algoritmo</h4>
+                    <p>En la era del Big Data y la inteligencia artificial, las predicciones basadas en complejos algoritmos se han convertido en un clásico antes de cada gran torneo. Y el nuevo y expandido Mundial de Clubes de 2025, con su formato de 32 equipos, no es una excepción. Un conocido 'superordenador' de una empresa de análisis de datos ha publicado su pronóstico tras procesar millones de variables, y el resultado es claro: el Manchester City de Pep Guardiola es el máximo favorito para alzarse con el título, otorgándole un 28.3% de probabilidades. Le siguen, a una distancia considerable, el Real Madrid (15.4%) y el Bayern de Múnich (11.2%).</p>
+                    <h4>La maldición del favorito</h4>
+                    <p>Sin embargo, la noticia ha sido recibida con una oleada de escepticismo y humor en las redes sociales. ¿El motivo? La merecida reputación 'gafe' de este superordenador, que acumula un historial de errores notables en sus predicciones de grandes eventos. Falló estrepitosamente en el último Mundial de selecciones, en varias finales de Champions League y en campeonatos de liga, a menudo señalando como campeón a un equipo que acababa sufriendo una eliminación inesperada.</p>
+                    <p>Por ello, los aficionados de los equipos rivales han acogido la noticia como la mejor de las suertes, bromeando con que el favoritismo del City es ahora su mayor maldición y una garantía de que no ganarán el torneo. Mientras la ciencia de datos intenta abrirse paso en el deporte, el componente impredecible, pasional y mágico del fútbol parece, de momento, resistirse a ser encerrado en un frío y, a menudo, equivocado algoritmo.</p>
+                </div>
+            </div>
+
             <div data-category="tacticas">
                 <h2 class="section-title">*** El rincón del táctico ***</h2>
                 <div class="article-card">
@@ -374,22 +379,13 @@
 Liverpool presionando (4-1-5)
 
     (Salah) ---- (Nunez) ---- (Diaz)
-
-
       (Szoboszlai) --- (Jones)
-
 
             (Mac Allister)
 
-
-
 (Trent) -- (VVD) -- (Konate) -- (Robertson)
 
-
-
                    (Alisson)
-
-                   
                         </div>
                         <p>El 'Gegenpressing' que llevó al Liverpool de Jürgen Klopp a la gloria se basaba en una ferocidad casi caótica, un 'heavy metal' futbolístico para recuperar el balón inmediatamente tras la pérdida. Arne Slot, su sucesor, ha mantenido la esencia de la presión alta pero ha añadido capas de sofisticación táctica. Su 'Gegenpressing 2.0' es más inteligente, más zonal y menos dependiente de la heroicidad individual, lo que ha resultado en un equipo igual de intenso pero más sostenible en el tiempo.</p>
                         <p>La clave del sistema de Slot reside en los 'triggers' o desencadenantes. El equipo no salta a presionar a lo loco. Lo hace de forma coordinada y automática cuando se produce una situación concreta que el equipo ha entrenado: un pase atrás del rival, un control deficiente de un contrario o un pase a la banda que limita el espacio del receptor. En ese instante, el equipo se transforma de un 4-3-3 a un 4-1-5, con los dos interiores (Szoboszlai y Jones han sido claves) saltando a la altura de los delanteros para crear una superioridad numérica asfixiante cerca del área rival.</p>
@@ -398,7 +394,6 @@ Liverpool presionando (4-1-5)
                 </div>
             </div>
             
-            <!-- LEGENDS -->
             <div data-category="leyendas">
                 <h2 class="section-title">+++ Leyendas de los 90 +++</h2>
                 <div class="article-card legend-card">
@@ -408,11 +403,30 @@ Liverpool presionando (4-1-5)
                     <button class="read-more-btn">LEER MÁS >>></button>
                     <div class="full-article-content">
                         <h4>El año que vivimos peligrosamente</h4>
-                        <p>Hay futbolistas que marcan una época. Y luego está Ronaldo Nazário. Lo suyo no fue una época; fue un destello, un cometa que atravesó el firmamento del Camp Nou en la temporada 1996-97 y lo cambió todo para siempre. Llegó siendo un niño prodigio del PSV, con una sonrisa pícara y unas rodillas que aún no conocían el tormento. Y se marchó un año después, rumbo a Milán, convertido en una fuerza incontenible, un susurro de lo que los dioses del fútbol eran capaces de imaginar.</p>
-                        <p>Recordar a ese Ronaldo es recordar la potencia en su estado más puro, la velocidad que no era humana, sino animal. Era una estampida de un solo hombre, un búfalo con la técnica de un bailarín de ballet. Cuando arrancaba con el balón cosido al pie, el césped parecía encogerse bajo sus botas, los defensas se convertían en estatuas de sal y el tiempo se detenía, expectante, sabiendo que algo memorable estaba a punto de ocurrir. El público del Camp Nou aprendió a contener la respiración cuando el '9' recibía el balón.</p>
-                        <h4>El manifiesto de Compostela</h4>
-                        <p>Su gol en Compostela no es un gol; es un manifiesto. Es la tesis doctoral sobre cómo un solo individuo puede desafiar la lógica, la física y la voluntad de once rivales. Aquella carrera desde su propio campo, zafándose de agarrones, de patadas, de empujones, sin perder la compostura ni el equilibrio, para acabar definiendo con una frialdad insultante, es la Capilla Sixtina del fútbol de los 90. Es una obra de arte que aún hoy se estudia, un momento que define no a un jugador, sino a una era. Bobby Robson, su entrenador, se llevaba las manos a la cabeza. No era para menos. No había explicación lógica para lo que acababa de ver.</p>
-                        <p>Se fue pronto, sí. Se fue dejando el amargo sabor de lo que pudo ser y no fue, una historia de amor demasiado corta. Pero su herencia en Barcelona no son los títulos que no ganó de blaugrana, que también los ganó (Copa, Recopa, Supercopa), sino el recuerdo imborrable de haber visto, aunque solo fuera por un instante, la perfección hecha futbolista.</p>
+                        <p>Hay futbolistas que marcan una época. Y luego está Ronaldo Nazário. Lo suyo no fue una época; fue un destello, un cometa que atravesó el firmamento del Camp Nou en la temporada 1996-97 y lo cambió todo para siempre. Llegó siendo un niño prodigio del PSV, con una sonrisa pícara y unas rodillas que aún no conocían el tormento. Llegó con la vitola de futuro Balón de Oro, pero nadie podía prever la magnitud de su impacto. En un fútbol, el de los 90, que aún se debatía entre el líbero y el rigor táctico italiano, la aparición de Ronaldo fue una anomalía, un cortocircuito en el sistema.</p>
+                        <p>Recordar a ese Ronaldo es recordar la potencia en su estado más puro, la velocidad que no era humana, sino animal. Era una estampida de un solo hombre, un búfalo con la técnica de un bailarín de ballet. Su arrancada era un trueno. Cuando recibía el balón y se giraba, el estadio entero contenía la respiración. No era una cuestión de si se iría del defensor, sino de cuántos se llevaría por delante. Los rivales no le entraban, rebotaban. El césped parecía encogerse bajo sus botas, los defensas se convertían en estatuas de sal y el tiempo se detenía, expectante, sabiendo que algo memorable estaba a punto de ocurrir.</p>
+                        <h4>El manifiesto de Compostela y una temporada irreal</h4>
+                        <p>Su gol en Compostela no es un gol; es un manifiesto. Es la tesis doctoral sobre cómo un solo individuo puede desafiar la lógica, la física y la voluntad de once rivales. Aquella carrera desde su propio campo, zafándose de agarrones, de patadas, de empujones, sin perder la compostura ni el equilibrio, para acabar definiendo con una frialdad insultante, es la Capilla Sixtina del fútbol de los 90. Es una obra de arte que aún hoy se estudia, un momento que define no a un jugador, sino a una era. Bobby Robson, su entrenador, se llevaba las manos a la cabeza, incrédulo, como un niño que acaba de ver magia por primera vez. No era para menos. No había explicación lógica para lo que acababa de ver.</p>
+                        <p>Pero reducir su temporada a ese gol sería injusto. Fue un año de exhibición constante. Sus 47 goles en 49 partidos son una estadística que hoy, en la era de los récords estratosféricos, sigue pareciendo irreal. Marcó goles de todas las facturas: de potencia, de vaselina, de regate puro, de remate implacable. Su hat-trick al Valencia, con aquel tercer gol en el que parece patinar sobre el césped, es otro ejemplo de su dominio absoluto. Llevó al Barça a ganar la Copa del Rey, la Recopa de Europa y la Supercopa de España, casi todo lo que se podía ganar.</p>
+                        <h4>El adiós que rompió un sueño</h4>
+                        <p>Se fue pronto, sí. Demasiado pronto. Se fue dejando el amargo sabor de lo que pudo ser y no fue, una historia de amor demasiado corta, truncada por despachos y contratos. La herida de su marcha al Inter de Milán, siendo el jugador más querido y dominante del planeta, aún escuece en la memoria culé. Aquella temporada perfecta, sin lesiones, pletórico de fuerza, fue el pico más alto de un jugador que, aunque después ganó Mundiales y Balones de Oro, nunca volvió a transmitir esa sensación de poderío sobrenatural y salvaje. Sus rodillas, más tarde, le recordarían que era humano. Pero durante un año, solo uno, nos hizo creer que no lo era. Su herencia en Barcelona no son solo los títulos; es el recuerdo imborrable de haber visto, aunque solo fuera por un instante, la perfección hecha futbolista.</p>
+                    </div>
+                </div>
+                 <div class="article-card legend-card">
+                    <img src="https://i.imgur.com/b8Zsurp.png" alt="Imagen de Zinedine Zidane">
+                    <h3>Zidane: la pausa que detenía el tiempo</h3>
+                    <p>En un fútbol que empezaba a obsesionarse con la velocidad, apareció un hombre que hizo de la pausa un arte. Zidane no corría; flotaba. No golpeaba el balón; lo acariciaba. Su juego era un ballet en medio del caos...</p>
+                    <button class="read-more-btn">LEER MÁS >>></button>
+                    <div class="full-article-content">
+                        <h4>El antihéroe silencioso de los 90</h4>
+                        <p>Si la década de los 90 fue la era de la explosión, la velocidad y el marketing, Zinedine Zidane fue su contrapunto silencioso y elegante. Mientras otros vendían su imagen, él hablaba en el campo con un lenguaje que solo los genios entienden. No necesitaba la potencia de Ronaldo ni la excentricidad de Cantona. Le bastaba con su control, su visión y, sobre todo, esa pausa. Esa bendita pausa. Zidane era capaz de detener el tiempo. Cuando recibía el balón, el mundo frenético del fútbol moderno se congelaba a su alrededor. Los rivales, ansiosos por robarle la pelota, pasaban de largo, víctimas de una calma que desquiciaba. Él, mientras tanto, levantaba la cabeza, con la elegancia de un bailarín, y elegía el siguiente movimiento. Su juego no era un sprint; era un vals.</p>
+                        <p>Nacido en los barrios humildes de Marsella, su fútbol siempre tuvo ese aroma de calle, de potrero, pero refinado con un barniz de pura clase. Su etapa inicial en el Cannes y el Girondins de Burdeos fue el prólogo de lo que estaba por venir. Con el Girondins, llevó a un equipo modesto a una final de la Copa de la UEFA, dejando por el camino a gigantes como el AC Milan. Aquel era un Zidane más terrenal, más físico, pero en sus controles orientados y en sus giros ya se adivinaba al artista que estaba a punto de conquistar el mundo.</p>
+                        <h4>La consagración en Turín y la gloria con 'Les Bleus'</h4>
+                        <p>Su fichaje por la Juventus en 1996 fue su doctorado. En el exigente y táctico fútbol italiano, Zidane se convirtió en un jugador total. Aprendió a competir, a sufrir, a entender que el talento sin trabajo no basta. Bajo la batuta de Marcello Lippi, se transformó en el líder de un equipo legendario que dominó Italia y alcanzó dos finales consecutivas de la Champions League. Aunque ambas se perdieron, dejando una espina clavada, fue en Turín donde 'Zizou' se convirtió en el mejor jugador del mundo, ganando su primer Balón de Oro en 1998.</p>
+                        <p>Ese mismo año, alcanzaría la inmortalidad. El Mundial de Francia '98 fue su obra maestra. Toda una nación, multicultural y compleja, se unió detrás de la figura de aquel hijo de inmigrantes argelinos. Tras una expulsión en la fase de grupos que le hizo cargar con el peso de la crítica, Zidane regresó para redimirse de la forma más gloriosa posible. La final contra el Brasil de Ronaldo, el gran favorito, era el escenario perfecto. Y allí, en el Stade de France, Zidane no marcó un gol cualquiera. Marcó dos, ambos de cabeza, un recurso que no era su especialidad, demostrando su increíble capacidad competitiva. Aquellos dos goles no solo dieron a Francia su primer Mundial; elevaron a Zidane a la categoría de héroe nacional, un símbolo de unidad y éxito.</p>
+                        <h4>La 'roulette' como filosofía de vida</h4>
+                        <p>Si hay un movimiento que define a Zidane, es la 'roulette', ese giro sobre sí mismo con el balón pegado al pie que era a la vez un regate y una declaración de principios. No era un adorno; era la solución más elegante y eficaz a un problema. Era su forma de decir que, ante la presión y el acoso, la mejor salida es la calma, la inteligencia y la técnica. La 'roulette' era la metáfora de su fútbol: una pausa, un giro y, de repente, un mundo de posibilidades se abría ante él. </p>
+                        <p>Zidane fue el faro de una generación. En una década de ruido y furia, él fue la melodía clásica, el recordatorio de que el fútbol, en su esencia más pura, es un arte. Su legado en los 90 no se mide solo en títulos, sino en la belleza que aportó al juego. Fue el poeta silencioso que, con un simple control, era capaz de escribir el verso más hermoso.</p>
                     </div>
                 </div>
             </div>
@@ -434,6 +448,20 @@ Liverpool presionando (4-1-5)
             const articleListContainer = document.getElementById('article-list');
             const articleViewerContainer = document.getElementById('article-viewer');
             const filters = document.querySelectorAll('.nav-filter');
+
+            // Auto-sort news articles by date to show newest first
+            const list = document.getElementById('article-list');
+            const title = list.querySelector('h2.section-title');
+            const newsArticles = Array.from(list.querySelectorAll('#article-list > .article-card'));
+            
+            newsArticles.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+            
+            let referenceNode = title;
+            newsArticles.forEach(article => {
+                referenceNode.after(article);
+                referenceNode = article;
+            });
+
 
             function showView(viewName) {
                 if (viewName === 'viewer') {
@@ -472,7 +500,7 @@ Liverpool presionando (4-1-5)
                     const imageSrc = imageElement ? imageElement.src : '';
                     const fullContent = card.querySelector('.full-article-content').innerHTML;
 
-                    const imageHTML = imageSrc ? `<img src="${imageSrc}" alt="${title}">` : '';
+                    const imageHTML = imageSrc ? `<div class="article-image-container"><img src="${imageSrc}" alt="${title}"></div>` : '';
 
                     articleViewerContainer.innerHTML = `
                         <h2>${title}</h2>
